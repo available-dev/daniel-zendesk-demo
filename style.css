@@ -4900,8 +4900,6 @@ h1, h2, h3, h4 { letter-spacing: -0.01em; }
   gap: 10px;
   text-decoration: none;
 }
-.shell-pecten { width: 46px; height: auto; display: block; }
-.shell-pecten-sm { width: 38px; }
 .shell-wordmark {
   font-family: Futura, "Century Gothic", "Trebuchet MS", Arial, sans-serif;
   font-weight: 800;
@@ -5148,7 +5146,6 @@ h1, h2, h3, h4 { letter-spacing: -0.01em; }
 }
 .shell-footer-brand { max-width: 320px; }
 .shell-footer-brand .shell-wordmark { color: #fff; font-size: 26px; vertical-align: middle; }
-.shell-footer-brand .shell-pecten { display: inline-block; vertical-align: middle; margin-right: 8px; }
 .shell-footer-tagline { color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.5; margin: 14px 0 0; }
 .shell-footer-cols { display: flex; gap: 56px; flex-wrap: wrap; }
 .shell-footer-col h3 {
