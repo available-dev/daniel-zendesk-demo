@@ -476,6 +476,25 @@
 
   // Search
 
+  // Fill the "Help topics" header dropdown with the help center's categories
+  window.addEventListener("DOMContentLoaded", () => {
+    const menu = document.querySelector("[data-topics-menu]");
+    if (!menu) return;
+    const locale = menu.dataset.locale || "en-us";
+    fetch(`/api/v2/help_center/${locale}/categories.json?per_page=100`)
+      .then((response) => (response.ok ? response.json() : { categories: [] }))
+      .then(({ categories }) => {
+        categories.forEach((category) => {
+          const item = document.createElement("a");
+          item.setAttribute("role", "menuitem");
+          item.href = category.html_url || `/hc/${locale}/categories/${category.id}`;
+          item.textContent = category.name;
+          menu.appendChild(item);
+        });
+      })
+      .catch(() => {});
+  });
+
   window.addEventListener("DOMContentLoaded", () => {
     // Set up clear functionality for the search field
     const searchForms = [...document.querySelectorAll(searchFormSelector)];
