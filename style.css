@@ -5262,12 +5262,23 @@ input[type=submit]:hover, input[type=submit]:focus {
 .tm-section { margin: 64px 0; }
 .tm-tabs { display: flex; justify-content: center; gap: 24px; margin: -8px 0 28px; }
 .tm-tab {
-  font-size: 16px;
-  padding-bottom: 4px;
+  background: none;
+  border: 0;
   border-bottom: 2px solid var(--tm-ink);
+  border-radius: 0;
+  font-family: var(--tm-font);
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 0 0 4px;
+  min-width: 0;
   color: var(--tm-ink);
+  cursor: pointer;
 }
+.tm-tab:hover { color: var(--tm-purple); background: none; }
 .tm-tab.is-active { color: var(--tm-purple); border-bottom-color: var(--tm-purple); }
+.tm-tab:focus-visible { outline: 2px solid var(--tm-purple); outline-offset: 4px; }
+.tm-card-grid[hidden] { display: none; }
+.tm-guides-status { grid-column: 1 / -1; text-align: center; color: var(--tm-g500); padding: 40px 0; }
 
 /* ---- Home hero ---- */
 .tm-home-hero { padding-top: 28px; }

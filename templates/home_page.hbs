@@ -55,11 +55,14 @@
 
   <section class="tm-section tm-featured">
     <h2 class="tm-h2"><span class="tm-underline">{{#is help_center.locale 'da'}}Populære guides{{else}}Popular guides{{/is}}</span></h2>
-    <div class="tm-tabs" aria-hidden="true">
-      <span class="tm-tab is-active">{{#is help_center.locale 'da'}}mest læste{{else}}most read{{/is}}</span>
-      <span class="tm-tab">{{#is help_center.locale 'da'}}nyeste{{else}}latest{{/is}}</span>
+    <div class="tm-tabs" role="tablist" data-guide-tabs data-locale="{{help_center.locale}}">
+      <button type="button" class="tm-tab is-active" role="tab" aria-selected="true" aria-controls="tm-guides-curated" id="tm-tab-curated">{{#is help_center.locale 'da'}}mest læste{{else}}most read{{/is}}</button>
+      <button type="button" class="tm-tab" role="tab" aria-selected="false" aria-controls="tm-guides-latest" id="tm-tab-latest">{{#is help_center.locale 'da'}}nyeste{{else}}latest{{/is}}</button>
     </div>
-    <ul class="tm-card-grid">
+    <ul class="tm-card-grid tm-guides-latest" id="tm-guides-latest" role="tabpanel" aria-labelledby="tm-tab-latest" hidden>
+      <li class="tm-guides-status">{{#is help_center.locale 'da'}}Henter de nyeste artikler…{{else}}Loading the latest articles…{{/is}}</li>
+    </ul>
+    <ul class="tm-card-grid" id="tm-guides-curated" role="tabpanel" aria-labelledby="tm-tab-curated">
       <li class="tm-card">
         <a href="/hc/{{help_center.locale}}/p/where-is-my-order" class="tm-card-link">
           <span class="tm-card-media" aria-hidden="true">📦</span>

@@ -476,6 +476,78 @@
 
   // Search
 
+  // "Popular guides" tabs: curated guides vs. the latest knowledge base articles
+  window.addEventListener("DOMContentLoaded", () => {
+    const tablist = document.querySelector("[data-guide-tabs]");
+    if (!tablist) return;
+    const tabs = [...tablist.querySelectorAll("[role='tab']")];
+    const locale = tablist.dataset.locale || "en-us";
+    const emojiFor = (title) => {
+      const t = title.toLowerCase();
+      if (/order|ordre|status/.test(t)) return "📦";
+      if (/deliver|shipping|parcel|levering|pakke|fragt/.test(t)) return "🚚";
+      if (/return|refund|retur|refusion/.test(t)) return "↩️";
+      if (/warrant|repair|garanti|reparation/.test(t)) return "🛠️";
+      if (/pay|invoice|klarna|betal|faktura/.test(t)) return "💳";
+      if (/voucher|gavekort/.test(t)) return "🎁";
+      if (/account|password|adresse|konto/.test(t)) return "👤";
+      if (/sound|software|licen|lyd/.test(t)) return "🎛️";
+      return "📄";
+    };
+    let latestLoaded = false;
+    const loadLatest = (panel) => {
+      if (latestLoaded) return;
+      latestLoaded = true;
+      fetch(`/api/v2/help_center/${locale}/articles.json?sort_by=created_at&sort_order=desc&per_page=6`)
+        .then((response) => (response.ok ? response.json() : { articles: [] }))
+        .then(({ articles }) => {
+          panel.innerHTML = "";
+          if (!articles.length) {
+            panel.innerHTML = `<li class="tm-guides-status">${locale.startsWith("da") ? "Ingen artikler endnu." : "No articles yet."}</li>`;
+            return;
+          }
+          articles.forEach((article) => {
+            const li = document.createElement("li");
+            li.className = "tm-card";
+            const link = document.createElement("a");
+            link.className = "tm-card-link";
+            link.href = article.html_url;
+            const media = document.createElement("span");
+            media.className = "tm-card-media";
+            media.setAttribute("aria-hidden", "true");
+            media.textContent = emojiFor(article.title);
+            const tag = document.createElement("span");
+            tag.className = "tm-card-tag";
+            tag.textContent = new Date(article.created_at).toLocaleDateString(locale, { day: "numeric", month: "long", year: "numeric" });
+            const title = document.createElement("span");
+            title.className = "tm-card-title";
+            title.textContent = article.title;
+            const text = document.createElement("span");
+            text.className = "tm-card-text";
+            text.textContent = (article.body || "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim().slice(0, 140);
+            link.append(media, tag, title, text);
+            li.appendChild(link);
+            panel.appendChild(li);
+          });
+        })
+        .catch(() => {
+          panel.innerHTML = `<li class="tm-guides-status">${locale.startsWith("da") ? "Artiklerne kunne ikke hentes." : "Could not load articles."}</li>`;
+        });
+    };
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((other) => {
+          const selected = other === tab;
+          other.classList.toggle("is-active", selected);
+          other.setAttribute("aria-selected", String(selected));
+          const panel = document.getElementById(other.getAttribute("aria-controls"));
+          if (panel) panel.hidden = !selected;
+          if (selected && panel && panel.classList.contains("tm-guides-latest")) loadLatest(panel);
+        });
+      });
+    });
+  });
+
   // Fill the "Help topics" header dropdown with the help center's categories
   window.addEventListener("DOMContentLoaded", () => {
     const menu = document.querySelector("[data-topics-menu]");
