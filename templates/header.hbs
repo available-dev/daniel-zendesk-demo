@@ -3,8 +3,8 @@
 <header class="header tm-header">
   <div class="tm-promo">
     <div class="tm-wrap tm-promo-inner">
-      <span>{{t 'tm_promo_text'}}</span>
-      {{#link 'new_request'}}{{t 'tm_promo_link'}}{{/link}}
+      <span>{{#is current_locale.locale 'da'}}Brug for hjælp til en ordre? Vores kundeservice svarer inden for 24 timer –{{else}}Need help with an order? Our support team replies within 24 hours –{{/is}}</span>
+      {{#link 'new_request'}}{{#is current_locale.locale 'da'}}Kontakt os nu{{else}}Contact us now{{/is}}{{/link}}
     </div>
   </div>
 
@@ -19,11 +19,11 @@
 
       <p class="tm-topbar-note">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M1 4h13v11H1zM14 8h4l3 3v4h-7z"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg>
-        {{t 'tm_free_shipping'}}
+        {{#is current_locale.locale 'da'}}gratis forsendelse fra 1.100 kr{{else}}free shipping from 1,100 kr{{/is}}
       </p>
 
       <ul class="tm-topbar-links">
-        <li>{{#link 'new_request'}}{{t 'tm_contact'}}{{/link}}</li>
+        <li>{{#link 'new_request'}}{{#is current_locale.locale 'da'}}Kontakt{{else}}Contact{{/is}}{{/link}}</li>
         <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">thomann.dk</a></li>
         <li class="tm-locale">
           {{#if alternative_locales}}
@@ -55,13 +55,13 @@
         <ul>
           <li>
             {{#link 'help_center'}}
-              {{t 'tm_help_topics'}}
+              {{#is current_locale.locale 'da'}}Hjælpeemner{{else}}Help topics{{/is}}
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" focusable="false" viewBox="0 0 12 12" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/></svg>
             {{/link}}
           </li>
           <li>
             {{#link 'service_catalog'}}
-              {{t 'tm_service'}}
+              {{#is current_locale.locale 'da'}}Service{{else}}Service{{/is}}
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" focusable="false" viewBox="0 0 12 12" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/></svg>
             {{/link}}
           </li>
@@ -77,7 +77,7 @@
       <div class="tm-actions">
         {{#if signed_in}}
           <div class="user-info dropdown">
-            <button class="dropdown-toggle tm-action" aria-haspopup="true" aria-expanded="false" title="{{user_name}}">
+            <button class="dropdown-toggle tm-action" aria-haspopup="true" aria-expanded="false">
               {{user_avatar class="user-avatar"}}
               <span class="visibility-hidden">{{user_name}}</span>
             </button>
@@ -93,20 +93,20 @@
             </div>
           </div>
         {{else}}
-          {{#link "sign_in" class="tm-action sign-in" role="link" title=(t 'sign_in')}}
+          {{#link "sign_in" class="tm-action sign-in" role="link"}}
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3.2"/><path d="M6.2 18.5c1.3-2.4 3.4-3.6 5.8-3.6s4.5 1.2 5.8 3.6"/></svg>
             <span class="visibility-hidden">{{t 'sign_in'}}</span>
           {{/link}}
         {{/if}}
 
-        {{#link "requests" class="tm-action" title=(t 'tm_my_requests')}}
+        {{#link "requests" class="tm-action" title="My requests"}}
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20.5s-8-4.6-8-10.4A4.4 4.4 0 0 1 12 7.3a4.4 4.4 0 0 1 8 2.8c0 5.8-8 10.4-8 10.4z"/></svg>
-          <span class="visibility-hidden">{{t 'tm_my_requests'}}</span>
+          <span class="visibility-hidden">{{#is current_locale.locale 'da'}}Mine anmodninger{{else}}My requests{{/is}}</span>
         {{/link}}
 
-        {{#link "new_request" class="tm-action" title=(t 'tm_submit_request')}}
+        {{#link "new_request" class="tm-action" title="Submit a request"}}
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12.5h5"/></svg>
-          <span class="visibility-hidden">{{t 'tm_submit_request'}}</span>
+          <span class="visibility-hidden">{{#is current_locale.locale 'da'}}Send en anmodning{{else}}Submit a request{{/is}}</span>
         {{/link}}
 
         <div class="nav-wrapper-mobile">
@@ -135,7 +135,7 @@
                 <li class="item">{{#link "sign_in" role="link"}}{{t 'sign_in'}}{{/link}}</li>
                 <li class="nav-divider"></li>
               {{/if}}
-              <li class="item">{{#link 'help_center'}}{{t 'tm_help_topics'}}{{/link}}</li>
+              <li class="item">{{#link 'help_center'}}{{#is current_locale.locale 'da'}}Hjælpeemner{{else}}Help topics{{/is}}{{/link}}</li>
               <li class="item">{{link 'service_catalog'}}</li>
               <li class="item">{{link 'community'}}</li>
               <li class="item">{{link 'new_request' class='submit-a-request'}}</li>

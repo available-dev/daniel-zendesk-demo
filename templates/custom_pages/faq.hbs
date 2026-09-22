@@ -1,13 +1,13 @@
 <div class="tm-article-hero">
   <div class="tm-article-inner">
-    <p class="tm-article-eyebrow">{{t 'tm_guide_faq_tag'}}</p>
-    <h1 class="tm-article-title">{{t 'tm_guide_faq_title'}}</h1>
-    <p class="tm-article-sub">{{t 'tm_guide_faq_text'}}</p>
+    <p class="tm-article-eyebrow">{{#is current_locale.locale 'da'}}FAQ{{else}}FAQ{{/is}}</p>
+    <h1 class="tm-article-title">{{#is current_locale.locale 'da'}}Ofte stillede spørgsmål{{else}}Frequently asked questions{{/is}}</h1>
+    <p class="tm-article-sub">{{#is current_locale.locale 'da'}}Hurtige svar på de spørgsmål, vi oftest får om ordrer, levering, returnering og betaling.{{else}}Quick answers to the questions we hear most about orders, delivery, returns and payment.{{/is}}</p>
   </div>
 </div>
 
 <article class="tm-article">
-  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{t 'tm_help_center'}}</a> / {{t 'tm_guide_faq_title'}}</nav>
+  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{#is current_locale.locale 'da'}}Hjælpecenter{{else}}Help Center{{/is}}</a> / {{#is current_locale.locale 'da'}}Ofte stillede spørgsmål{{else}}Frequently asked questions{{/is}}</nav>
 
   {{#is current_locale.locale 'da'}}
   <div class="tm-faq-item">

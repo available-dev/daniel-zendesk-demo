@@ -1,13 +1,13 @@
 <div class="tm-article-hero">
   <div class="tm-article-inner">
-    <p class="tm-article-eyebrow">{{t 'tm_guide_payment_tag'}}</p>
-    <h1 class="tm-article-title">{{t 'tm_guide_payment_title'}}</h1>
+    <p class="tm-article-eyebrow">{{#is current_locale.locale 'da'}}Betaling{{else}}Payment{{/is}}</p>
+    <h1 class="tm-article-title">{{#is current_locale.locale 'da'}}Betalingsmetoder &amp; fakturaer{{else}}Payment methods &amp; invoices{{/is}}</h1>
     <p class="tm-article-sub">{{#is current_locale.locale 'da'}}De måder, du kan betale på, hvordan ratebetaling fungerer, og hvor du finder din faktura.{{else}}The ways you can pay, how instalments work and where to find your invoice.{{/is}}</p>
   </div>
 </div>
 
 <article class="tm-article">
-  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{t 'tm_help_center'}}</a> / {{t 'tm_guide_payment_title'}}</nav>
+  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{#is current_locale.locale 'da'}}Hjælpecenter{{else}}Help Center{{/is}}</a> / {{#is current_locale.locale 'da'}}Betalingsmetoder &amp; fakturaer{{else}}Payment methods &amp; invoices{{/is}}</nav>
 
   {{#is current_locale.locale 'da'}}
   <p>Vælg den betalingsmetode, der passer dig, i kassen. Alle betalinger behandles over en krypteret forbindelse, og vi gemmer aldrig dine fulde kortoplysninger.</p>
@@ -52,11 +52,11 @@
   {{/is}}
 
   <div class="tm-related">
-    <h2>{{t 'tm_read_also'}}</h2>
+    <h2>{{#is current_locale.locale 'da'}}Læs også{{else}}Read also{{/is}}</h2>
     <ul class="tm-related-links">
-      <li><a href="/hc/{{current_locale.locale}}/p/returns">{{t 'tm_guide_returns_title'}}</a></li>
-      <li><a href="/hc/{{current_locale.locale}}/p/where-is-my-order">{{t 'tm_guide_orders_title'}}</a></li>
-      <li><a href="/hc/{{current_locale.locale}}/p/faq">{{t 'tm_guide_faq_title'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/returns">{{#is current_locale.locale 'da'}}Sådan returnerer du en vare{{else}}How to return an item{{/is}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/where-is-my-order">{{#is current_locale.locale 'da'}}Hvor er min ordre?{{else}}Where is my order?{{/is}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/faq">{{#is current_locale.locale 'da'}}Ofte stillede spørgsmål{{else}}Frequently asked questions{{/is}}</a></li>
     </ul>
   </div>
 </article>

@@ -1,13 +1,13 @@
 <div class="tm-article-hero">
   <div class="tm-article-inner">
-    <p class="tm-article-eyebrow">{{t 'tm_guide_returns_tag'}}</p>
-    <h1 class="tm-article-title">{{t 'tm_guide_returns_title'}}</h1>
+    <p class="tm-article-eyebrow">{{#is current_locale.locale 'da'}}Returnering{{else}}Returns{{/is}}</p>
+    <h1 class="tm-article-title">{{#is current_locale.locale 'da'}}Sådan returnerer du en vare{{else}}How to return an item{{/is}}</h1>
     <p class="tm-article-sub">{{#is current_locale.locale 'da'}}Ikke tilfreds med dit køb? Du har 30 dage til at sende det retur – sådan fungerer det, trin for trin.{{else}}Not happy with your purchase? You have 30 days to send it back – here is how it works, step by step.{{/is}}</p>
   </div>
 </div>
 
 <article class="tm-article">
-  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{t 'tm_help_center'}}</a> / {{t 'tm_guide_returns_title'}}</nav>
+  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{#is current_locale.locale 'da'}}Hjælpecenter{{else}}Help Center{{/is}}</a> / {{#is current_locale.locale 'da'}}Sådan returnerer du en vare{{else}}How to return an item{{/is}}</nav>
 
   {{#is current_locale.locale 'da'}}
   <p>Vores 30 dages money-back garanti betyder, at du kan prøve dit nye udstyr derhjemme og returnere det, hvis det ikke er det rigtige for dig. Opret returneringen online, print labelen og aflever pakken – pengene følger, så snart vi har tjekket varen.</p>
@@ -76,11 +76,11 @@
   {{/is}}
 
   <div class="tm-related">
-    <h2>{{t 'tm_read_also'}}</h2>
+    <h2>{{#is current_locale.locale 'da'}}Læs også{{else}}Read also{{/is}}</h2>
     <ul class="tm-related-links">
-      <li><a href="/hc/{{current_locale.locale}}/p/warranty-and-repairs">{{t 'tm_guide_warranty_title'}}</a></li>
-      <li><a href="/hc/{{current_locale.locale}}/p/payment-and-invoices">{{t 'tm_guide_payment_title'}}</a></li>
-      <li><a href="/hc/{{current_locale.locale}}/p/faq">{{t 'tm_guide_faq_title'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/warranty-and-repairs">{{#is current_locale.locale 'da'}}Garanti &amp; reparation{{else}}Warranty &amp; repairs{{/is}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/payment-and-invoices">{{#is current_locale.locale 'da'}}Betalingsmetoder &amp; fakturaer{{else}}Payment methods &amp; invoices{{/is}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/faq">{{#is current_locale.locale 'da'}}Ofte stillede spørgsmål{{else}}Frequently asked questions{{/is}}</a></li>
     </ul>
   </div>
 </article>

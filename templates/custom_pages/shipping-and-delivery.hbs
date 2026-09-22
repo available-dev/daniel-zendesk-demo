@@ -1,13 +1,13 @@
 <div class="tm-article-hero">
   <div class="tm-article-inner">
-    <p class="tm-article-eyebrow">{{t 'tm_guide_delivery_tag'}}</p>
-    <h1 class="tm-article-title">{{t 'tm_guide_delivery_title'}}</h1>
+    <p class="tm-article-eyebrow">{{#is current_locale.locale 'da'}}Levering{{else}}Delivery{{/is}}</p>
+    <h1 class="tm-article-title">{{#is current_locale.locale 'da'}}Forsendelse &amp; levering{{else}}Shipping &amp; delivery{{/is}}</h1>
     <p class="tm-article-sub">{{#is current_locale.locale 'da'}}Leveringstider, fragtpriser og hvad der sker, når din pakke er på vej.{{else}}Delivery times, shipping costs and what happens when your parcel is on its way.{{/is}}</p>
   </div>
 </div>
 
 <article class="tm-article">
-  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{t 'tm_help_center'}}</a> / {{t 'tm_guide_delivery_title'}}</nav>
+  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{#is current_locale.locale 'da'}}Hjælpecenter{{else}}Help Center{{/is}}</a> / {{#is current_locale.locale 'da'}}Forsendelse &amp; levering{{else}}Shipping &amp; delivery{{/is}}</nav>
 
   {{#is current_locale.locale 'da'}}
   <p>Alle ordrer sendes fra vores centrallager i Tyskland – Europas største musiklager. Varer markeret <strong>på lager</strong>, som bestilles før kl. 15.00 på en hverdag, afsendes normalt samme dag.</p>
@@ -50,11 +50,11 @@
   {{/is}}
 
   <div class="tm-related">
-    <h2>{{t 'tm_read_also'}}</h2>
+    <h2>{{#is current_locale.locale 'da'}}Læs også{{else}}Read also{{/is}}</h2>
     <ul class="tm-related-links">
-      <li><a href="/hc/{{current_locale.locale}}/p/where-is-my-order">{{t 'tm_guide_orders_title'}}</a></li>
-      <li><a href="/hc/{{current_locale.locale}}/p/cancel-a-shipment">{{t 'tm_cancel_shipment'}}</a></li>
-      <li><a href="/hc/{{current_locale.locale}}/p/returns">{{t 'tm_guide_returns_title'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/where-is-my-order">{{#is current_locale.locale 'da'}}Hvor er min ordre?{{else}}Where is my order?{{/is}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/cancel-a-shipment">{{#is current_locale.locale 'da'}}Fortryd en afsendelse{{else}}Cancel a shipment{{/is}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/returns">{{#is current_locale.locale 'da'}}Sådan returnerer du en vare{{else}}How to return an item{{/is}}</a></li>
     </ul>
   </div>
 </article>

@@ -1,13 +1,13 @@
 <div class="tm-article-hero">
   <div class="tm-article-inner">
-    <p class="tm-article-eyebrow">{{t 'tm_guide_warranty_tag'}}</p>
-    <h1 class="tm-article-title">{{t 'tm_guide_warranty_title'}}</h1>
+    <p class="tm-article-eyebrow">{{#is current_locale.locale 'da'}}Garanti{{else}}Warranty{{/is}}</p>
+    <h1 class="tm-article-title">{{#is current_locale.locale 'da'}}Garanti &amp; reparation{{else}}Warranty &amp; repairs{{/is}}</h1>
     <p class="tm-article-sub">{{#is current_locale.locale 'da'}}Alle produkter leveres med 3 års Thomann garanti. Her er, hvad den dækker, og hvordan du får noget repareret.{{else}}Every product comes with a 3-year Thomann warranty. Here is what it covers and how to get something repaired.{{/is}}</p>
   </div>
 </div>
 
 <article class="tm-article">
-  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{t 'tm_help_center'}}</a> / {{t 'tm_guide_warranty_title'}}</nav>
+  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{#is current_locale.locale 'da'}}Hjælpecenter{{else}}Help Center{{/is}}</a> / {{#is current_locale.locale 'da'}}Garanti &amp; reparation{{else}}Warranty &amp; repairs{{/is}}</nav>
 
   {{#is current_locale.locale 'da'}}
   <p>Ud over dine lovbestemte rettigheder er alt, du køber hos os, dækket af <strong>3 års garanti</strong> fra leveringsdatoen. Opstår der en fejl på produktet i den periode, reparerer vi det, ombytter det eller refunderer det – alt efter hvad der giver mening for dig.</p>
@@ -64,11 +64,11 @@
   {{/is}}
 
   <div class="tm-related">
-    <h2>{{t 'tm_read_also'}}</h2>
+    <h2>{{#is current_locale.locale 'da'}}Læs også{{else}}Read also{{/is}}</h2>
     <ul class="tm-related-links">
-      <li><a href="/hc/{{current_locale.locale}}/p/returns">{{t 'tm_guide_returns_title'}}</a></li>
-      <li><a href="/hc/{{current_locale.locale}}/p/where-is-my-order">{{t 'tm_guide_orders_title'}}</a></li>
-      <li><a href="/hc/{{current_locale.locale}}/p/faq">{{t 'tm_guide_faq_title'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/returns">{{#is current_locale.locale 'da'}}Sådan returnerer du en vare{{else}}How to return an item{{/is}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/where-is-my-order">{{#is current_locale.locale 'da'}}Hvor er min ordre?{{else}}Where is my order?{{/is}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/faq">{{#is current_locale.locale 'da'}}Ofte stillede spørgsmål{{else}}Frequently asked questions{{/is}}</a></li>
     </ul>
   </div>
 </article>

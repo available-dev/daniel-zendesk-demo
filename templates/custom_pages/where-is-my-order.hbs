@@ -1,13 +1,13 @@
 <div class="tm-article-hero">
   <div class="tm-article-inner">
-    <p class="tm-article-eyebrow">{{t 'tm_guide_orders_tag'}}</p>
-    <h1 class="tm-article-title">{{t 'tm_guide_orders_title'}}</h1>
+    <p class="tm-article-eyebrow">{{#is current_locale.locale 'da'}}Ordrer{{else}}Orders{{/is}}</p>
+    <h1 class="tm-article-title">{{#is current_locale.locale 'da'}}Hvor er min ordre?{{else}}Where is my order?{{/is}}</h1>
     <p class="tm-article-sub">{{#is current_locale.locale 'da'}}Sådan tjekker du status på din ordre, finder dit track & trace-nummer og forstår, hvad hver status betyder.{{else}}How to check the status of your order, find your tracking number and know what each status means.{{/is}}</p>
   </div>
 </div>
 
 <article class="tm-article">
-  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{t 'tm_help_center'}}</a> / {{t 'tm_guide_orders_title'}}</nav>
+  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{#is current_locale.locale 'da'}}Hjælpecenter{{else}}Help Center{{/is}}</a> / {{#is current_locale.locale 'da'}}Hvor er min ordre?{{else}}Where is my order?{{/is}}</nav>
 
   {{#is current_locale.locale 'da'}}
   <p>Så snart din ordre er afgivet, modtager du en ordrebekræftelse på e-mail. Fra det øjeblik kan du følge hvert trin – fra plukning på vores lager til levering ved din dør – under <strong>Min konto</strong> → <strong>Ordrer</strong>.</p>
@@ -54,11 +54,11 @@
   {{/is}}
 
   <div class="tm-related">
-    <h2>{{t 'tm_read_also'}}</h2>
+    <h2>{{#is current_locale.locale 'da'}}Læs også{{else}}Read also{{/is}}</h2>
     <ul class="tm-related-links">
-      <li><a href="/hc/{{current_locale.locale}}/p/shipping-and-delivery">{{t 'tm_guide_delivery_title'}}</a></li>
-      <li><a href="/hc/{{current_locale.locale}}/p/cancel-a-shipment">{{t 'tm_cancel_shipment'}}</a></li>
-      <li><a href="/hc/{{current_locale.locale}}/p/faq">{{t 'tm_guide_faq_title'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/shipping-and-delivery">{{#is current_locale.locale 'da'}}Forsendelse &amp; levering{{else}}Shipping &amp; delivery{{/is}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/cancel-a-shipment">{{#is current_locale.locale 'da'}}Fortryd en afsendelse{{else}}Cancel a shipment{{/is}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/faq">{{#is current_locale.locale 'da'}}Ofte stillede spørgsmål{{else}}Frequently asked questions{{/is}}</a></li>
     </ul>
   </div>
 </article>
