@@ -179,6 +179,27 @@
     sending: 'Sending...',
     error: 'An error occurred. Please try again.'
   };
+  // Danish copy when the help center is viewed in Danish
+  var LOCALE = '{{current_locale.locale}}';
+  if (LOCALE.indexOf('da') === 0) {
+    t = {
+      title: 'Fortryd afsendelse',
+      subtitle: 'Udfyld formularen herunder for at fortryde dit køb. Vi sender en bekræftelse til din e-mailadresse.',
+      navn: 'Navn',
+      navnPlaceholder: 'Indtast dit fulde navn',
+      navnError: 'Indtast venligst dit navn.',
+      ordre: 'Ordreoplysninger',
+      ordrePlaceholder: 'Indtast ordrenummer, f.eks. 12345',
+      ordreError: 'Indtast venligst dine ordreoplysninger.',
+      email: 'E-mailadresse',
+      emailPlaceholder: 'Indtast din e-mail',
+      emailError: 'Indtast venligst en gyldig e-mailadresse.',
+      btn: 'Bekræft fortrydelse',
+      footer: 'En automatisk kvittering sendes straks efter indsendelse.',
+      successTitle: 'Anmodning modtaget',
+      successText: 'Vi har modtaget din fortrydelse og vender tilbage hurtigst muligt. Tjek din indbakke for en bekræftelse.'
+    };
+  }
 
   // Populate the form texts
   document.getElementById('fa-title').textContent = t.title;
@@ -237,7 +258,7 @@
     btn.disabled = true;
     btn.innerHTML = '<span class="fa-spinner"></span>' + t.sending;
 
-    fetch('/hc/en-us/requests/new', {
+    fetch('/hc/' + LOCALE + '/requests/new', {
       credentials: 'include'
     })
     .then(function(r) { return r.text(); })

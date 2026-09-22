@@ -2,31 +2,31 @@
 
 <div class="tm-wrap">
   <section id="main-content" class="tm-home-hero">
-    <h2 class="tm-welcome">Welcome to {{help_center.name}} <span aria-hidden="true">👋</span></h2>
+    <h2 class="tm-welcome">{{t 'tm_welcome'}} {{help_center.name}} <span aria-hidden="true">👋</span></h2>
 
     <div class="tm-banner">
       <div class="tm-banner-copy">
-        <p class="tm-banner-kicker">Help Center</p>
-        <h3 class="tm-banner-title">How can we<br>help you today?</h3>
-        <p class="tm-banner-lead">Guides, answers and support for orders, delivery, returns and everything in between.</p>
+        <p class="tm-banner-kicker">{{t 'tm_help_center'}}</p>
+        <h3 class="tm-banner-title">{{t 'tm_hero_title'}}</h3>
+        <p class="tm-banner-lead">{{t 'tm_hero_lead'}}</p>
         <div class="tm-banner-actions">
-          <a href="#tm-categories" class="tm-btn tm-btn-light">Browse all topics</a>
-          {{#link 'new_request' class='tm-btn tm-btn-ghost'}}Contact support{{/link}}
+          <a href="#tm-categories" class="tm-btn tm-btn-light">{{t 'tm_browse_topics'}}</a>
+          {{#link 'new_request' class='tm-btn tm-btn-ghost'}}{{t 'tm_contact_support'}}{{/link}}
         </div>
       </div>
     </div>
 
     <ul class="tm-usps">
-      <li><span class="tm-hex tm-hex-blue">30</span><span>Days money-back guarantee</span></li>
-      <li><span class="tm-hex tm-hex-green">3</span><span>Years warranty</span></li>
-      <li><span class="tm-hex tm-hex-purple"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 4h13v11H1zM14 8h4l3 3v4h-7z"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg></span><span>Free delivery from 1,100 kr</span></li>
-      <li><span class="tm-hex tm-hex-orange"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span>Best service in Europe</span></li>
-      <li><span class="tm-hex tm-hex-navy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-6 9 6v11H3z"/><path d="M9 20v-7h6v7"/></svg></span><span>Europe's largest music warehouse</span></li>
+      <li><span class="tm-hex tm-hex-blue">30</span><span>{{t 'tm_usp_moneyback'}}</span></li>
+      <li><span class="tm-hex tm-hex-green">3</span><span>{{t 'tm_usp_warranty'}}</span></li>
+      <li><span class="tm-hex tm-hex-purple"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 4h13v11H1zM14 8h4l3 3v4h-7z"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg></span><span>{{t 'tm_usp_delivery'}}</span></li>
+      <li><span class="tm-hex tm-hex-orange"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span>{{t 'tm_usp_service'}}</span></li>
+      <li><span class="tm-hex tm-hex-navy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-6 9 6v11H3z"/><path d="M9 20v-7h6v7"/></svg></span><span>{{t 'tm_usp_warehouse'}}</span></li>
     </ul>
   </section>
 
   <section id="tm-categories" class="tm-section knowledge-base">
-    <h2 class="tm-h2">All categories</h2>
+    <h2 class="tm-h2">{{t 'tm_all_categories'}}</h2>
     <section class="categories blocks">
       <ul class="blocks-list">
         {{#each categories}}
@@ -54,58 +54,58 @@
   </section>
 
   <section class="tm-section tm-featured">
-    <h2 class="tm-h2"><span class="tm-underline">Popular guides</span></h2>
+    <h2 class="tm-h2"><span class="tm-underline">{{t 'tm_popular_guides'}}</span></h2>
     <div class="tm-tabs" aria-hidden="true">
-      <span class="tm-tab is-active">most read</span>
-      <span class="tm-tab">latest</span>
+      <span class="tm-tab is-active">{{t 'tm_tab_most_read'}}</span>
+      <span class="tm-tab">{{t 'tm_tab_latest'}}</span>
     </div>
     <ul class="tm-card-grid">
       <li class="tm-card">
-        <a href="/hc/en-us/p/where-is-my-order" class="tm-card-link">
+        <a href="/hc/{{current_locale.locale}}/p/where-is-my-order" class="tm-card-link">
           <span class="tm-card-media" aria-hidden="true">📦</span>
-          <span class="tm-card-tag">Orders</span>
-          <span class="tm-card-title">Where is my order?</span>
-          <span class="tm-card-text">Check your order status, find the tracking number and see what each status means.</span>
+          <span class="tm-card-tag">{{t 'tm_guide_orders_tag'}}</span>
+          <span class="tm-card-title">{{t 'tm_guide_orders_title'}}</span>
+          <span class="tm-card-text">{{t 'tm_guide_orders_text'}}</span>
         </a>
       </li>
       <li class="tm-card">
-        <a href="/hc/en-us/p/shipping-and-delivery" class="tm-card-link">
+        <a href="/hc/{{current_locale.locale}}/p/shipping-and-delivery" class="tm-card-link">
           <span class="tm-card-media" aria-hidden="true">🚚</span>
-          <span class="tm-card-tag">Delivery</span>
-          <span class="tm-card-title">Shipping &amp; delivery</span>
-          <span class="tm-card-text">Delivery times, shipping costs and what to do if a parcel arrives damaged.</span>
+          <span class="tm-card-tag">{{t 'tm_guide_delivery_tag'}}</span>
+          <span class="tm-card-title">{{t 'tm_guide_delivery_title'}}</span>
+          <span class="tm-card-text">{{t 'tm_guide_delivery_text'}}</span>
         </a>
       </li>
       <li class="tm-card">
-        <a href="/hc/en-us/p/returns" class="tm-card-link">
+        <a href="/hc/{{current_locale.locale}}/p/returns" class="tm-card-link">
           <span class="tm-card-media" aria-hidden="true">↩️</span>
-          <span class="tm-card-tag">Returns</span>
-          <span class="tm-card-title">How to return an item</span>
-          <span class="tm-card-text">Register a return, print the label and get your refund – the 30-day money-back guarantee step by step.</span>
+          <span class="tm-card-tag">{{t 'tm_guide_returns_tag'}}</span>
+          <span class="tm-card-title">{{t 'tm_guide_returns_title'}}</span>
+          <span class="tm-card-text">{{t 'tm_guide_returns_text'}}</span>
         </a>
       </li>
       <li class="tm-card">
-        <a href="/hc/en-us/p/warranty-and-repairs" class="tm-card-link">
+        <a href="/hc/{{current_locale.locale}}/p/warranty-and-repairs" class="tm-card-link">
           <span class="tm-card-media" aria-hidden="true">🛠️</span>
-          <span class="tm-card-tag">Warranty</span>
-          <span class="tm-card-title">Warranty &amp; repairs</span>
-          <span class="tm-card-text">What the 3-year Thomann warranty covers and how to get something repaired.</span>
+          <span class="tm-card-tag">{{t 'tm_guide_warranty_tag'}}</span>
+          <span class="tm-card-title">{{t 'tm_guide_warranty_title'}}</span>
+          <span class="tm-card-text">{{t 'tm_guide_warranty_text'}}</span>
         </a>
       </li>
       <li class="tm-card">
-        <a href="/hc/en-us/p/payment-and-invoices" class="tm-card-link">
+        <a href="/hc/{{current_locale.locale}}/p/payment-and-invoices" class="tm-card-link">
           <span class="tm-card-media" aria-hidden="true">💳</span>
-          <span class="tm-card-tag">Payment</span>
-          <span class="tm-card-title">Payment methods &amp; invoices</span>
-          <span class="tm-card-text">Card, PayPal, Klarna instalments and bank transfer – plus where to find your invoice.</span>
+          <span class="tm-card-tag">{{t 'tm_guide_payment_tag'}}</span>
+          <span class="tm-card-title">{{t 'tm_guide_payment_title'}}</span>
+          <span class="tm-card-text">{{t 'tm_guide_payment_text'}}</span>
         </a>
       </li>
       <li class="tm-card">
-        <a href="/hc/en-us/p/faq" class="tm-card-link">
+        <a href="/hc/{{current_locale.locale}}/p/faq" class="tm-card-link">
           <span class="tm-card-media" aria-hidden="true">❓</span>
-          <span class="tm-card-tag">FAQ</span>
-          <span class="tm-card-title">Frequently asked questions</span>
-          <span class="tm-card-text">Quick answers to the questions we hear most about orders, delivery, returns and payment.</span>
+          <span class="tm-card-tag">{{t 'tm_guide_faq_tag'}}</span>
+          <span class="tm-card-title">{{t 'tm_guide_faq_title'}}</span>
+          <span class="tm-card-text">{{t 'tm_guide_faq_text'}}</span>
         </a>
       </li>
     </ul>
@@ -133,10 +133,10 @@
   {{/if}}
 
   <section class="tm-section tm-feedback">
-    <h2 class="tm-feedback-title">Want to share something with us, or have a question?</h2>
+    <h2 class="tm-feedback-title">{{t 'tm_feedback_title'}}</h2>
     {{#link 'new_request' class='tm-btn'}}
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a2 2 0 0 0 2 2h2l5 4V5L7 9H5a2 2 0 0 0-2 2z"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg>
-      Help and feedback
+      {{t 'tm_feedback_btn'}}
     {{/link}}
   </section>
 

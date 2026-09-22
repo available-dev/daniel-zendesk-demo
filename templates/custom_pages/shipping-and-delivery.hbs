@@ -1,14 +1,34 @@
 <div class="tm-article-hero">
   <div class="tm-article-inner">
-    <p class="tm-article-eyebrow">Delivery</p>
-    <h1 class="tm-article-title">Shipping &amp; delivery</h1>
-    <p class="tm-article-sub">Delivery times, shipping costs and what happens when your parcel is on its way.</p>
+    <p class="tm-article-eyebrow">{{t 'tm_guide_delivery_tag'}}</p>
+    <h1 class="tm-article-title">{{t 'tm_guide_delivery_title'}}</h1>
+    <p class="tm-article-sub">{{#is current_locale.locale 'da'}}Leveringstider, fragtpriser og hvad der sker, når din pakke er på vej.{{else}}Delivery times, shipping costs and what happens when your parcel is on its way.{{/is}}</p>
   </div>
 </div>
 
 <article class="tm-article">
-  <nav class="tm-breadcrumb"><a href="/hc/en-us">Help Center</a> / Shipping &amp; delivery</nav>
+  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{t 'tm_help_center'}}</a> / {{t 'tm_guide_delivery_title'}}</nav>
 
+  {{#is current_locale.locale 'da'}}
+  <p>Alle ordrer sendes fra vores centrallager i Tyskland – Europas største musiklager. Varer markeret <strong>på lager</strong>, som bestilles før kl. 15.00 på en hverdag, afsendes normalt samme dag.</p>
+
+  <div class="tm-callout">
+    <strong>Gratis forsendelse</strong> på ordrer fra 1.100 kr til Danmark. Under det koster standardforsendelse 89 kr pr. ordre, uanset hvor mange varer du køber.
+  </div>
+
+  <h2>Leveringstider til Danmark</h2>
+  <ul>
+    <li><strong>Standardpakke:</strong> 2–4 hverdage efter afsendelse.</li>
+    <li><strong>Express:</strong> 1–2 hverdage – kan vælges i kassen for lagervarer.</li>
+    <li><strong>Voluminøs fragt</strong> (klaverer, store PA-anlæg, trommesæt): 4–7 hverdage, leveret af en fragtmand, der ringer og aftaler tidspunkt.</li>
+  </ul>
+
+  <h2>Fragtfirmaer</h2>
+  <p>Pakker leveres af GLS eller PostNord afhængigt af størrelse og destination. Du vælger hjemmelevering eller pakkeshop i kassen og kan ændre leveringspræferencen på fragtfirmaets track & trace-side, når pakken er afsendt.</p>
+
+  <h2>Beskadiget eller manglende pakke</h2>
+  <p>Tjek venligst pakken, før du kvitterer for den. Er emballagen synligt beskadiget, så notér det over for chaufføren og tag et billede. <a href="/hc/{{current_locale.locale}}/requests/new">Kontakt os</a> derefter inden for 7 dage med billederne og dit ordrenummer – vi håndterer sagen med fragtfirmaet og sender en erstatning.</p>
+  {{else}}
   <p>All orders are shipped from our central warehouse in Germany – Europe's largest music warehouse. Items marked <strong>in stock</strong> that are ordered before 15:00 on a weekday usually leave the same day.</p>
 
   <div class="tm-callout">
@@ -26,14 +46,15 @@
   <p>Parcels are delivered by GLS or PostNord depending on size and destination. You can choose home delivery or a parcel shop at checkout, and change the delivery preference in the carrier's tracking page once the parcel has been shipped.</p>
 
   <h2>Damaged or missing parcel</h2>
-  <p>Please check the parcel before signing for it. If the packaging is visibly damaged, note it with the driver and take a photo. Then <a href="/hc/en-us/requests/new">contact us</a> within 7 days with the photos and your order number – we handle the claim with the carrier and send a replacement.</p>
+  <p>Please check the parcel before signing for it. If the packaging is visibly damaged, note it with the driver and take a photo. Then <a href="/hc/{{current_locale.locale}}/requests/new">contact us</a> within 7 days with the photos and your order number – we handle the claim with the carrier and send a replacement.</p>
+  {{/is}}
 
   <div class="tm-related">
-    <h2>Read also</h2>
+    <h2>{{t 'tm_read_also'}}</h2>
     <ul class="tm-related-links">
-      <li><a href="/hc/en-us/p/where-is-my-order">Where is my order?</a></li>
-      <li><a href="/hc/en-us/p/cancel-a-shipment">Cancel a shipment</a></li>
-      <li><a href="/hc/en-us/p/returns">How to return an item</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/where-is-my-order">{{t 'tm_guide_orders_title'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/cancel-a-shipment">{{t 'tm_cancel_shipment'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/returns">{{t 'tm_guide_returns_title'}}</a></li>
     </ul>
   </div>
 </article>

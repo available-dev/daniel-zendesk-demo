@@ -1,14 +1,47 @@
 <div class="tm-article-hero">
   <div class="tm-article-inner">
-    <p class="tm-article-eyebrow">Returns</p>
-    <h1 class="tm-article-title">How to return an item</h1>
-    <p class="tm-article-sub">Not happy with your purchase? You have 30 days to send it back – here is how it works, step by step.</p>
+    <p class="tm-article-eyebrow">{{t 'tm_guide_returns_tag'}}</p>
+    <h1 class="tm-article-title">{{t 'tm_guide_returns_title'}}</h1>
+    <p class="tm-article-sub">{{#is current_locale.locale 'da'}}Ikke tilfreds med dit køb? Du har 30 dage til at sende det retur – sådan fungerer det, trin for trin.{{else}}Not happy with your purchase? You have 30 days to send it back – here is how it works, step by step.{{/is}}</p>
   </div>
 </div>
 
 <article class="tm-article">
-  <nav class="tm-breadcrumb"><a href="/hc/en-us">Help Center</a> / How to return an item</nav>
+  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{t 'tm_help_center'}}</a> / {{t 'tm_guide_returns_title'}}</nav>
 
+  {{#is current_locale.locale 'da'}}
+  <p>Vores 30 dages money-back garanti betyder, at du kan prøve dit nye udstyr derhjemme og returnere det, hvis det ikke er det rigtige for dig. Opret returneringen online, print labelen og aflever pakken – pengene følger, så snart vi har tjekket varen.</p>
+
+  <ol class="tm-steps">
+    <li>
+      <h3>Opret returneringen</h3>
+      <p>Log ind, åbn <strong>Min konto → Ordrer</strong> og vælg ordren. Klik på <strong>Returnér varer</strong>, markér de produkter, du vil sende retur, og fortæl os årsagen – det hjælper os med at blive bedre.</p>
+    </li>
+    <li>
+      <h3>Print returlabelen</h3>
+      <p>Vi sender dig straks en forudbetalt returlabel på e-mail. Returnering fra Danmark er gratis for ordrer over 1.100 kr; for mindre ordrer trækkes fragtomkostningen fra refusionen.</p>
+    </li>
+    <li>
+      <h3>Pak det sikkert</h3>
+      <p>Brug den originale emballage, hvor det er muligt, og vedlæg alt tilbehør, manualer og kabler. Instrumenter og højttalere bør pakkes i en solid yderkasse – transportskader på grund af dårlig emballering kan ikke dækkes.</p>
+    </li>
+    <li>
+      <h3>Aflever pakken</h3>
+      <p>Aflever pakken i en hvilken som helst pakkeshop hos det fragtfirma, der står på labelen. Gem kvitteringen med track & trace-nummeret, indtil refusionen er modtaget.</p>
+    </li>
+    <li>
+      <h3>Få pengene tilbage</h3>
+      <p>Når varen er tjekket på vores lager, refunderer vi beløbet til den betalingsmetode, du brugte. Det tager normalt 3–5 hverdage, efter vi har modtaget pakken.</p>
+    </li>
+  </ol>
+
+  <div class="tm-callout">
+    <strong>Tip:</strong> Har du fortrudt et produkt, der stadig er på vej? Du behøver ikke vente på, at det ankommer – brug <a href="/hc/{{current_locale.locale}}/p/cancel-a-shipment">Fortryd en afsendelse</a>, så stopper vi den før levering, hvor det er muligt.
+  </div>
+
+  <h2>Hvad kan ikke returneres?</h2>
+  <p>Af hygiejne- og ophavsretlige grunde er nogle få produktgrupper undtaget fra money-back garantien, når de er åbnet: in-ear-hovedtelefoner, mundharmonikaer, mundstykker, softwarelicenser og downloads samt specialfremstillede eller personaliserede varer. Er du i tvivl, så <a href="/hc/{{current_locale.locale}}/requests/new">spørg os, før du bestiller</a>.</p>
+  {{else}}
   <p>Our 30-day money-back guarantee means you can try your new gear at home and return it if it isn't right for you. Register the return online, print the label and hand the parcel in – the refund follows as soon as we have checked the item.</p>
 
   <ol class="tm-steps">
@@ -35,18 +68,19 @@
   </ol>
 
   <div class="tm-callout">
-    <strong>Tip:</strong> Changed your mind about a product that is still on its way? You don't need to wait for it to arrive – use <a href="/hc/en-us/p/cancel-a-shipment">Cancel a shipment</a> and we will stop it before delivery where possible.
+    <strong>Tip:</strong> Changed your mind about a product that is still on its way? You don't need to wait for it to arrive – use <a href="/hc/{{current_locale.locale}}/p/cancel-a-shipment">Cancel a shipment</a> and we will stop it before delivery where possible.
   </div>
 
   <h2>What can't be returned?</h2>
-  <p>For hygiene and copyright reasons a few product groups are excluded from the money-back guarantee once opened: in-ear headphones, harmonicas, mouthpieces, software licences and downloads, and custom-made or personalised items. If you are unsure, <a href="/hc/en-us/requests/new">ask us before ordering</a>.</p>
+  <p>For hygiene and copyright reasons a few product groups are excluded from the money-back guarantee once opened: in-ear headphones, harmonicas, mouthpieces, software licences and downloads, and custom-made or personalised items. If you are unsure, <a href="/hc/{{current_locale.locale}}/requests/new">ask us before ordering</a>.</p>
+  {{/is}}
 
   <div class="tm-related">
-    <h2>Read also</h2>
+    <h2>{{t 'tm_read_also'}}</h2>
     <ul class="tm-related-links">
-      <li><a href="/hc/en-us/p/warranty-and-repairs">Warranty &amp; repairs</a></li>
-      <li><a href="/hc/en-us/p/payment-and-invoices">Payment methods &amp; invoices</a></li>
-      <li><a href="/hc/en-us/p/faq">Frequently asked questions</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/warranty-and-repairs">{{t 'tm_guide_warranty_title'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/payment-and-invoices">{{t 'tm_guide_payment_title'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/faq">{{t 'tm_guide_faq_title'}}</a></li>
     </ul>
   </div>
 </article>

@@ -2,35 +2,35 @@
   <div class="tm-footer-grey">
     <div class="tm-wrap tm-footer-cols">
       <div class="tm-footer-col">
-        <h3>Your benefits</h3>
+        <h3>{{t 'tm_footer_benefits'}}</h3>
         <ul class="tm-checklist">
-          <li>3 years Thomann warranty</li>
-          <li>30 days money-back guarantee</li>
-          <li>Repair service</li>
-          <li>Advice from our experts</li>
-          <li>Satisfaction guarantee</li>
-          <li>Europe's largest music warehouse</li>
+          <li>{{t 'tm_benefit_warranty'}}</li>
+          <li>{{t 'tm_benefit_moneyback'}}</li>
+          <li>{{t 'tm_benefit_repair'}}</li>
+          <li>{{t 'tm_benefit_advice'}}</li>
+          <li>{{t 'tm_benefit_satisfaction'}}</li>
+          <li>{{t 'tm_benefit_warehouse'}}</li>
         </ul>
       </div>
       <div class="tm-footer-col">
-        <h3>Service</h3>
+        <h3>{{t 'tm_service'}}</h3>
         <ul>
-          <li>{{#link 'help_center'}}Support center{{/link}}</li>
-          <li>{{#link 'new_request'}}Contact{{/link}}</li>
+          <li>{{#link 'help_center'}}{{t 'tm_support_center'}}{{/link}}</li>
+          <li>{{#link 'new_request'}}{{t 'tm_contact'}}{{/link}}</li>
           <li>{{link 'requests'}}</li>
-          <li><a href="/hc/en-us/p/cancel-a-shipment">Cancel a shipment</a></li>
+          <li><a href="/hc/{{current_locale.locale}}/p/cancel-a-shipment">{{t 'tm_cancel_shipment'}}</a></li>
           <li>{{link 'service_catalog'}}</li>
         </ul>
       </div>
       <div class="tm-footer-col">
-        <h3>Popular guides</h3>
+        <h3>{{t 'tm_footer_guides'}}</h3>
         <ul>
-          <li><a href="/hc/en-us/p/where-is-my-order">Where is my order?</a></li>
-          <li><a href="/hc/en-us/p/shipping-and-delivery">Shipping &amp; delivery</a></li>
-          <li><a href="/hc/en-us/p/returns">How to return an item</a></li>
-          <li><a href="/hc/en-us/p/warranty-and-repairs">Warranty &amp; repairs</a></li>
-          <li><a href="/hc/en-us/p/payment-and-invoices">Payment methods &amp; invoices</a></li>
-          <li><a href="/hc/en-us/p/faq">Frequently asked questions</a></li>
+          <li><a href="/hc/{{current_locale.locale}}/p/where-is-my-order">{{t 'tm_guide_orders_title'}}</a></li>
+          <li><a href="/hc/{{current_locale.locale}}/p/shipping-and-delivery">{{t 'tm_guide_delivery_title'}}</a></li>
+          <li><a href="/hc/{{current_locale.locale}}/p/returns">{{t 'tm_guide_returns_title'}}</a></li>
+          <li><a href="/hc/{{current_locale.locale}}/p/warranty-and-repairs">{{t 'tm_guide_warranty_title'}}</a></li>
+          <li><a href="/hc/{{current_locale.locale}}/p/payment-and-invoices">{{t 'tm_guide_payment_title'}}</a></li>
+          <li><a href="/hc/{{current_locale.locale}}/p/faq">{{t 'tm_guide_faq_title'}}</a></li>
         </ul>
       </div>
     </div>
@@ -40,7 +40,7 @@
     <div class="tm-wrap">
       <div class="tm-footer-top">
         <span class="tm-wordmark" aria-hidden="true">th<span class="tm-dot"></span>mann</span>
-        <ul class="tm-social" aria-label="Social media">
+        <ul class="tm-social" aria-label="{{t 'tm_social_media'}}">
           <li><a href="https://www.facebook.com/thomann.dk" rel="noopener" target="_blank" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8z"/></svg><span class="visibility-hidden">Facebook</span></a></li>
           <li><a href="https://www.youtube.com/thomann" rel="noopener" target="_blank" title="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9l5 3-5 3z" fill="#070707"/></svg><span class="visibility-hidden">YouTube</span></a></li>
           <li><a href="https://www.instagram.com/thomann.music" rel="noopener" target="_blank" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg><span class="visibility-hidden">Instagram</span></a></li>
@@ -49,16 +49,16 @@
 
       <div class="tm-footer-links">
         <ul>
-          <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">Terms and conditions</a></li>
-          <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">Privacy policy</a></li>
-          <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">Cookie settings</a></li>
-          <li><a href="/hc/en-us/p/cancel-a-shipment">Right of withdrawal</a></li>
-          <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">Accessibility statement</a></li>
+          <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">{{t 'tm_terms'}}</a></li>
+          <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">{{t 'tm_privacy'}}</a></li>
+          <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">{{t 'tm_cookies'}}</a></li>
+          <li><a href="/hc/{{current_locale.locale}}/p/cancel-a-shipment">{{t 'tm_withdrawal'}}</a></li>
+          <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">{{t 'tm_accessibility'}}</a></li>
         </ul>
         <ul>
-          <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">About us</a></li>
-          <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">Careers</a></li>
-          <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">Blog</a></li>
+          <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">{{t 'tm_about'}}</a></li>
+          <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">{{t 'tm_careers'}}</a></li>
+          <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">{{t 'tm_blog'}}</a></li>
           <li>{{link 'community'}}</li>
         </ul>
         <div class="tm-footer-meta">
@@ -80,7 +80,7 @@
             {{/if}}
           </div>
           <p class="tm-footer-legal">© 1996–2026 {{help_center.name}}</p>
-          <p class="tm-footer-slogan">Thomann loves you, because you rock!</p>
+          <p class="tm-footer-slogan">{{t 'tm_slogan'}}</p>
         </div>
       </div>
     </div>

@@ -1,14 +1,36 @@
 <div class="tm-article-hero">
   <div class="tm-article-inner">
-    <p class="tm-article-eyebrow">Orders</p>
-    <h1 class="tm-article-title">Where is my order?</h1>
-    <p class="tm-article-sub">How to check the status of your order, find your tracking number and know what each status means.</p>
+    <p class="tm-article-eyebrow">{{t 'tm_guide_orders_tag'}}</p>
+    <h1 class="tm-article-title">{{t 'tm_guide_orders_title'}}</h1>
+    <p class="tm-article-sub">{{#is current_locale.locale 'da'}}Sådan tjekker du status på din ordre, finder dit track & trace-nummer og forstår, hvad hver status betyder.{{else}}How to check the status of your order, find your tracking number and know what each status means.{{/is}}</p>
   </div>
 </div>
 
 <article class="tm-article">
-  <nav class="tm-breadcrumb"><a href="/hc/en-us">Help Center</a> / Where is my order?</nav>
+  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{t 'tm_help_center'}}</a> / {{t 'tm_guide_orders_title'}}</nav>
 
+  {{#is current_locale.locale 'da'}}
+  <p>Så snart din ordre er afgivet, modtager du en ordrebekræftelse på e-mail. Fra det øjeblik kan du følge hvert trin – fra plukning på vores lager til levering ved din dør – under <strong>Min konto</strong> → <strong>Ordrer</strong>.</p>
+
+  <div class="tm-callout">
+    <strong>Hurtigt tjek:</strong> Log ind, åbn <strong>Min konto → Ordrer</strong> og klik på ordrenummeret. Den aktuelle status og – når pakken er afsendt – fragtfirmaets track & trace-link vises øverst på siden.
+  </div>
+
+  <h2>Hvad ordrestatusserne betyder</h2>
+  <ul>
+    <li><strong>Modtaget:</strong> Vi har din ordre og tjekker betalingen. Intet er plukket endnu, så ændringer er stadig mulige.</li>
+    <li><strong>Under behandling:</strong> Varerne bliver plukket og pakket på vores lager. Ordrer afgivet før kl. 15.00 på hverdage pakkes normalt samme dag.</li>
+    <li><strong>Afsendt:</strong> Din pakke er overdraget til fragtfirmaet. Track & trace-linket bliver aktivt inden for få timer.</li>
+    <li><strong>Delvist afsendt:</strong> En eller flere varer er på vej; resten følger i en separat pakke uden ekstra omkostninger.</li>
+    <li><strong>Leveret:</strong> Fragtfirmaet har bekræftet leveringen. Har du ikke modtaget pakken, så tjek først hos naboer og i din pakkeshop.</li>
+  </ul>
+
+  <h2>Varer med ventetid</h2>
+  <p>Nogle produkter vises med en forventet leveringsdato. Indeholder din ordre sådan en vare, holder vi hele ordren tilbage, indtil alt er på lager. Vil du hellere modtage de tilgængelige varer først? Kontakt os, så deler vi forsendelsen op for dig.</p>
+
+  <h2>Track & trace viser ingen bevægelse</h2>
+  <p>Der kan gå op til 24 timer efter afsendelse, før fragtfirmaets system opdaterer. Har track & trace ikke ændret sig i mere end tre hverdage, så <a href="/hc/{{current_locale.locale}}/requests/new">kontakt os</a> med dit ordrenummer, så opretter vi straks en efterlysning hos fragtfirmaet.</p>
+  {{else}}
   <p>As soon as your order is placed you receive an order confirmation by email. From that moment you can follow every step – from picking in our warehouse to delivery at your door – in <strong>My account</strong> under <strong>Orders</strong>.</p>
 
   <div class="tm-callout">
@@ -28,14 +50,15 @@
   <p>Some products are shown with an expected availability date. If your order contains such an item, we hold the complete order until everything is in stock. Prefer to receive the available items first? Contact us and we will split the shipment for you.</p>
 
   <h2>Tracking shows no movement</h2>
-  <p>It can take up to 24 hours after shipping before the carrier's system updates. If the tracking has not changed for more than three working days, <a href="/hc/en-us/requests/new">get in touch</a> with your order number and we will open an enquiry with the carrier straight away.</p>
+  <p>It can take up to 24 hours after shipping before the carrier's system updates. If the tracking has not changed for more than three working days, <a href="/hc/{{current_locale.locale}}/requests/new">get in touch</a> with your order number and we will open an enquiry with the carrier straight away.</p>
+  {{/is}}
 
   <div class="tm-related">
-    <h2>Read also</h2>
+    <h2>{{t 'tm_read_also'}}</h2>
     <ul class="tm-related-links">
-      <li><a href="/hc/en-us/p/shipping-and-delivery">Shipping &amp; delivery</a></li>
-      <li><a href="/hc/en-us/p/cancel-a-shipment">Cancel a shipment</a></li>
-      <li><a href="/hc/en-us/p/faq">Frequently asked questions</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/shipping-and-delivery">{{t 'tm_guide_delivery_title'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/cancel-a-shipment">{{t 'tm_cancel_shipment'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/faq">{{t 'tm_guide_faq_title'}}</a></li>
     </ul>
   </div>
 </article>

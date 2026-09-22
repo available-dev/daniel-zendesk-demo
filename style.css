@@ -5050,14 +5050,48 @@ input[type=submit]:hover, input[type=submit]:focus {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #C8102E;
-  position: relative;
-  overflow: hidden;
   flex: none;
+  background: #444 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='1.6'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18'/%3E%3C/svg%3E") center / 16px no-repeat;
 }
-.tm-flag::before, .tm-flag::after { content: ""; position: absolute; background: #fff; }
-.tm-flag::before { left: 6px; top: 0; width: 4px; height: 100%; }
-.tm-flag::after { top: 8px; left: 0; width: 100%; height: 4px; }
+/* Flag follows current_locale.locale (flagcdn.com); unknown locales keep the globe */
+.tm-flag[data-locale="da"] { background: url("https://flagcdn.com/w40/dk.png") center / cover no-repeat; }
+.tm-flag[data-locale="en-us"] { background: url("https://flagcdn.com/w40/us.png") center / cover no-repeat; }
+.tm-flag[data-locale="en-gb"] { background: url("https://flagcdn.com/w40/gb.png") center / cover no-repeat; }
+.tm-flag[data-locale="en-ca"] { background: url("https://flagcdn.com/w40/ca.png") center / cover no-repeat; }
+.tm-flag[data-locale="de"] { background: url("https://flagcdn.com/w40/de.png") center / cover no-repeat; }
+.tm-flag[data-locale="sv"] { background: url("https://flagcdn.com/w40/se.png") center / cover no-repeat; }
+.tm-flag[data-locale="no"] { background: url("https://flagcdn.com/w40/no.png") center / cover no-repeat; }
+.tm-flag[data-locale="nb"] { background: url("https://flagcdn.com/w40/no.png") center / cover no-repeat; }
+.tm-flag[data-locale="fi"] { background: url("https://flagcdn.com/w40/fi.png") center / cover no-repeat; }
+.tm-flag[data-locale="nl"] { background: url("https://flagcdn.com/w40/nl.png") center / cover no-repeat; }
+.tm-flag[data-locale="fr"] { background: url("https://flagcdn.com/w40/fr.png") center / cover no-repeat; }
+.tm-flag[data-locale="fr-ca"] { background: url("https://flagcdn.com/w40/ca.png") center / cover no-repeat; }
+.tm-flag[data-locale="es"] { background: url("https://flagcdn.com/w40/es.png") center / cover no-repeat; }
+.tm-flag[data-locale="es-es"] { background: url("https://flagcdn.com/w40/es.png") center / cover no-repeat; }
+.tm-flag[data-locale="es-419"] { background: url("https://flagcdn.com/w40/mx.png") center / cover no-repeat; }
+.tm-flag[data-locale="it"] { background: url("https://flagcdn.com/w40/it.png") center / cover no-repeat; }
+.tm-flag[data-locale="pl"] { background: url("https://flagcdn.com/w40/pl.png") center / cover no-repeat; }
+.tm-flag[data-locale="pt"] { background: url("https://flagcdn.com/w40/pt.png") center / cover no-repeat; }
+.tm-flag[data-locale="pt-br"] { background: url("https://flagcdn.com/w40/br.png") center / cover no-repeat; }
+.tm-flag[data-locale="cs"] { background: url("https://flagcdn.com/w40/cz.png") center / cover no-repeat; }
+.tm-flag[data-locale="sk"] { background: url("https://flagcdn.com/w40/sk.png") center / cover no-repeat; }
+.tm-flag[data-locale="hu"] { background: url("https://flagcdn.com/w40/hu.png") center / cover no-repeat; }
+.tm-flag[data-locale="ro"] { background: url("https://flagcdn.com/w40/ro.png") center / cover no-repeat; }
+.tm-flag[data-locale="bg"] { background: url("https://flagcdn.com/w40/bg.png") center / cover no-repeat; }
+.tm-flag[data-locale="el"] { background: url("https://flagcdn.com/w40/gr.png") center / cover no-repeat; }
+.tm-flag[data-locale="ru"] { background: url("https://flagcdn.com/w40/ru.png") center / cover no-repeat; }
+.tm-flag[data-locale="uk"] { background: url("https://flagcdn.com/w40/ua.png") center / cover no-repeat; }
+.tm-flag[data-locale="tr"] { background: url("https://flagcdn.com/w40/tr.png") center / cover no-repeat; }
+.tm-flag[data-locale="ja"] { background: url("https://flagcdn.com/w40/jp.png") center / cover no-repeat; }
+.tm-flag[data-locale="ko"] { background: url("https://flagcdn.com/w40/kr.png") center / cover no-repeat; }
+.tm-flag[data-locale="zh-cn"] { background: url("https://flagcdn.com/w40/cn.png") center / cover no-repeat; }
+.tm-flag[data-locale="zh-tw"] { background: url("https://flagcdn.com/w40/tw.png") center / cover no-repeat; }
+.tm-flag[data-locale="ar"] { background: url("https://flagcdn.com/w40/sa.png") center / cover no-repeat; }
+.tm-flag[data-locale="he"] { background: url("https://flagcdn.com/w40/il.png") center / cover no-repeat; }
+.tm-flag[data-locale="hi"] { background: url("https://flagcdn.com/w40/in.png") center / cover no-repeat; }
+.tm-flag[data-locale="id"] { background: url("https://flagcdn.com/w40/id.png") center / cover no-repeat; }
+.tm-flag[data-locale="th"] { background: url("https://flagcdn.com/w40/th.png") center / cover no-repeat; }
+.tm-flag[data-locale="vi"] { background: url("https://flagcdn.com/w40/vn.png") center / cover no-repeat; }
 
 .tm-navbar { background: #fff; border-bottom: 1px solid var(--tm-g200); position: relative; }
 .tm-navbar-inner {

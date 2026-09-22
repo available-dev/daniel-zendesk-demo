@@ -1,14 +1,35 @@
 <div class="tm-article-hero">
   <div class="tm-article-inner">
-    <p class="tm-article-eyebrow">Payment</p>
-    <h1 class="tm-article-title">Payment methods &amp; invoices</h1>
-    <p class="tm-article-sub">The ways you can pay, how instalments work and where to find your invoice.</p>
+    <p class="tm-article-eyebrow">{{t 'tm_guide_payment_tag'}}</p>
+    <h1 class="tm-article-title">{{t 'tm_guide_payment_title'}}</h1>
+    <p class="tm-article-sub">{{#is current_locale.locale 'da'}}De måder, du kan betale på, hvordan ratebetaling fungerer, og hvor du finder din faktura.{{else}}The ways you can pay, how instalments work and where to find your invoice.{{/is}}</p>
   </div>
 </div>
 
 <article class="tm-article">
-  <nav class="tm-breadcrumb"><a href="/hc/en-us">Help Center</a> / Payment methods &amp; invoices</nav>
+  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{t 'tm_help_center'}}</a> / {{t 'tm_guide_payment_title'}}</nav>
 
+  {{#is current_locale.locale 'da'}}
+  <p>Vælg den betalingsmetode, der passer dig, i kassen. Alle betalinger behandles over en krypteret forbindelse, og vi gemmer aldrig dine fulde kortoplysninger.</p>
+
+  <h2>Betalingsmetoder</h2>
+  <ul>
+    <li><strong>Kredit- eller debetkort:</strong> Visa, Mastercard og American Express. Beløbet reserveres, når du bestiller, og trækkes, når pakken afsendes.</li>
+    <li><strong>PayPal:</strong> Betal med din PayPal-saldo eller et tilknyttet kort. Refusioner går tilbage til samme PayPal-konto.</li>
+    <li><strong>Klarna:</strong> Betal nu, betal om 30 dage eller del beløbet op i månedlige rater. Klarna foretager en hurtig kreditvurdering i kassen.</li>
+    <li><strong>Bankoverførsel:</strong> Vi reserverer dine varer i 7 dage og afsender, så snart betalingen er modtaget. Bankoplysningerne står i din ordrebekræftelse.</li>
+  </ul>
+
+  <div class="tm-callout">
+    <strong>Vil du betale i rater?</strong> Vælg Klarna i kassen og en løbetid fra 6 til 36 måneder. Du ser det månedlige beløb og de samlede omkostninger, før du bekræfter.
+  </div>
+
+  <h2>Fakturaer</h2>
+  <p>Din faktura sendes som PDF på e-mail, når ordren afsendes, og du kan altid hente den under <strong>Min konto → Ordrer</strong>. Skal fakturaen udstedes til en virksomhed eller med CVR-nummer? Tilføj oplysningerne til din kontoadresse, før du bestiller, eller <a href="/hc/{{current_locale.locale}}/requests/new">skriv til os</a>, så udsteder vi den igen.</p>
+
+  <h2>Betaling afvist?</h2>
+  <p>De fleste afviste betalinger skyldes en grænse på kortet eller en tastefejl i faktureringsadressen. Tjek oplysningerne hos din bank og prøv igen – din kurv er gemt. Fortsætter problemet, så skift til en anden betalingsmetode eller kontakt os, så hjælper vi dig med at gennemføre ordren.</p>
+  {{else}}
   <p>Choose the payment method that suits you at checkout. All payments are processed over an encrypted connection and we never store your full card details.</p>
 
   <h2>Payment methods</h2>
@@ -24,17 +45,18 @@
   </div>
 
   <h2>Invoices</h2>
-  <p>Your invoice is emailed as a PDF when the order ships, and you can download it at any time from <strong>My account → Orders</strong>. Need an invoice made out to a company or with a VAT number? Add the details to your account address before ordering, or <a href="/hc/en-us/requests/new">ask us</a> and we will reissue it.</p>
+  <p>Your invoice is emailed as a PDF when the order ships, and you can download it at any time from <strong>My account → Orders</strong>. Need an invoice made out to a company or with a VAT number? Add the details to your account address before ordering, or <a href="/hc/{{current_locale.locale}}/requests/new">ask us</a> and we will reissue it.</p>
 
   <h2>Payment declined?</h2>
   <p>Most declined payments are caused by a limit on the card or a typo in the billing address. Check the details with your bank and try again – your basket is saved. If the problem continues, switch to another payment method or contact us and we will help you complete the order.</p>
+  {{/is}}
 
   <div class="tm-related">
-    <h2>Read also</h2>
+    <h2>{{t 'tm_read_also'}}</h2>
     <ul class="tm-related-links">
-      <li><a href="/hc/en-us/p/returns">How to return an item</a></li>
-      <li><a href="/hc/en-us/p/where-is-my-order">Where is my order?</a></li>
-      <li><a href="/hc/en-us/p/faq">Frequently asked questions</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/returns">{{t 'tm_guide_returns_title'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/where-is-my-order">{{t 'tm_guide_orders_title'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/faq">{{t 'tm_guide_faq_title'}}</a></li>
     </ul>
   </div>
 </article>

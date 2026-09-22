@@ -1,14 +1,41 @@
 <div class="tm-article-hero">
   <div class="tm-article-inner">
-    <p class="tm-article-eyebrow">Warranty</p>
-    <h1 class="tm-article-title">Warranty &amp; repairs</h1>
-    <p class="tm-article-sub">Every product comes with a 3-year Thomann warranty. Here is what it covers and how to get something repaired.</p>
+    <p class="tm-article-eyebrow">{{t 'tm_guide_warranty_tag'}}</p>
+    <h1 class="tm-article-title">{{t 'tm_guide_warranty_title'}}</h1>
+    <p class="tm-article-sub">{{#is current_locale.locale 'da'}}Alle produkter leveres med 3 års Thomann garanti. Her er, hvad den dækker, og hvordan du får noget repareret.{{else}}Every product comes with a 3-year Thomann warranty. Here is what it covers and how to get something repaired.{{/is}}</p>
   </div>
 </div>
 
 <article class="tm-article">
-  <nav class="tm-breadcrumb"><a href="/hc/en-us">Help Center</a> / Warranty &amp; repairs</nav>
+  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{t 'tm_help_center'}}</a> / {{t 'tm_guide_warranty_title'}}</nav>
 
+  {{#is current_locale.locale 'da'}}
+  <p>Ud over dine lovbestemte rettigheder er alt, du køber hos os, dækket af <strong>3 års garanti</strong> fra leveringsdatoen. Opstår der en fejl på produktet i den periode, reparerer vi det, ombytter det eller refunderer det – alt efter hvad der giver mening for dig.</p>
+
+  <div class="tm-callout">
+    <strong>Godt at vide:</strong> Du behøver ikke registrere noget. Din ordre under <strong>Min konto</strong> er dit købsbevis, og garantiperioden beregnes automatisk fra leveringsdatoen.
+  </div>
+
+  <h2>Hvad garantien dækker</h2>
+  <ul>
+    <li><strong>Fabrikations- og materialefejl</strong>, der opstår ved normal brug.</li>
+    <li><strong>Elektroniske fejl</strong> i forstærkere, keyboards, lydkort, effekter og andet strømforsynet udstyr.</li>
+    <li><strong>Mekaniske fejl</strong> som knækkede stemmeskruer, defekte potentiometre eller hængende tangenter, der ikke skyldes slag.</li>
+  </ul>
+
+  <h2>Hvad den ikke dækker</h2>
+  <ul>
+    <li>Sliddele som strenge, trommeskind, rør, batterier og pærer.</li>
+    <li>Skader fra uheld, væske, forkert brug eller uautoriserede ændringer.</li>
+    <li>Kosmetisk slid, der ikke påvirker funktionen.</li>
+  </ul>
+
+  <h2>Sådan anmoder du om reparation</h2>
+  <p>Opret <a href="/hc/{{current_locale.locale}}/requests/new">en ny anmodning</a> og beskriv fejlen så præcist som muligt – en kort video hjælper ofte. Vores teknikere svarer med næste skridt: en hurtig løsning, du selv kan udføre, en gratis returlabel til vores eget værksted eller en direkte ombytning, hvis reparation ikke kan betale sig. De fleste reparationer er færdige inden for 10 hverdage, efter varen er ankommet til værkstedet.</p>
+
+  <h2>Uden for garantien?</h2>
+  <p>Vores værksted reparerer også udstyr uden for garantiperioden. Du modtager et prisoverslag, før arbejdet påbegyndes, og betaler kun, hvis du godkender det.</p>
+  {{else}}
   <p>On top of your statutory rights, everything you buy from us is covered by a <strong>3-year warranty</strong> from the date of delivery. If a product develops a fault in that period, we repair it, replace it or refund it – whichever makes sense for you.</p>
 
   <div class="tm-callout">
@@ -30,17 +57,18 @@
   </ul>
 
   <h2>How to request a repair</h2>
-  <p>Open <a href="/hc/en-us/requests/new">a new request</a> and describe the fault as precisely as you can – a short video often helps. Our technicians will reply with the next step: a quick fix you can do yourself, a free return label for our in-house workshop, or a direct swap if repair isn't worthwhile. Most repairs are completed within 10 working days of arriving at the workshop.</p>
+  <p>Open <a href="/hc/{{current_locale.locale}}/requests/new">a new request</a> and describe the fault as precisely as you can – a short video often helps. Our technicians will reply with the next step: a quick fix you can do yourself, a free return label for our in-house workshop, or a direct swap if repair isn't worthwhile. Most repairs are completed within 10 working days of arriving at the workshop.</p>
 
   <h2>Out of warranty?</h2>
   <p>Our workshop repairs gear outside the warranty period too. You receive a cost estimate before any work begins and only pay if you approve it.</p>
+  {{/is}}
 
   <div class="tm-related">
-    <h2>Read also</h2>
+    <h2>{{t 'tm_read_also'}}</h2>
     <ul class="tm-related-links">
-      <li><a href="/hc/en-us/p/returns">How to return an item</a></li>
-      <li><a href="/hc/en-us/p/where-is-my-order">Where is my order?</a></li>
-      <li><a href="/hc/en-us/p/faq">Frequently asked questions</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/returns">{{t 'tm_guide_returns_title'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/where-is-my-order">{{t 'tm_guide_orders_title'}}</a></li>
+      <li><a href="/hc/{{current_locale.locale}}/p/faq">{{t 'tm_guide_faq_title'}}</a></li>
     </ul>
   </div>
 </article>

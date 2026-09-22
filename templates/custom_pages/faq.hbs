@@ -1,22 +1,67 @@
 <div class="tm-article-hero">
   <div class="tm-article-inner">
-    <p class="tm-article-eyebrow">FAQ</p>
-    <h1 class="tm-article-title">Frequently asked questions</h1>
-    <p class="tm-article-sub">Quick answers to the questions we hear most about orders, delivery, returns and payment.</p>
+    <p class="tm-article-eyebrow">{{t 'tm_guide_faq_tag'}}</p>
+    <h1 class="tm-article-title">{{t 'tm_guide_faq_title'}}</h1>
+    <p class="tm-article-sub">{{t 'tm_guide_faq_text'}}</p>
   </div>
 </div>
 
 <article class="tm-article">
-  <nav class="tm-breadcrumb"><a href="/hc/en-us">Help Center</a> / Frequently asked questions</nav>
+  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{t 'tm_help_center'}}</a> / {{t 'tm_guide_faq_title'}}</nav>
+
+  {{#is current_locale.locale 'da'}}
+  <div class="tm-faq-item">
+    <h3>Kan jeg ændre eller annullere min ordre?</h3>
+    <p>Ja, så længe den ikke er pakket. Brug <a href="/hc/{{current_locale.locale}}/p/cancel-a-shipment">Fortryd en afsendelse</a> eller kontakt os med dit ordrenummer. Når pakken er på vej, kan du blot returnere den under 30 dages money-back garanti.</p>
+  </div>
 
   <div class="tm-faq-item">
+    <h3>Hvor lang tid tager levering?</h3>
+    <p>Lagervarer bestilt før kl. 15.00 på hverdage afsendes samme dag og ankommer i Danmark inden for 2–4 hverdage. Se <a href="/hc/{{current_locale.locale}}/p/shipping-and-delivery">Forsendelse &amp; levering</a> for express og voluminøs fragt.</p>
+  </div>
+
+  <div class="tm-faq-item">
+    <h3>Er forsendelsen gratis?</h3>
+    <p>Forsendelse til Danmark er gratis på ordrer fra 1.100 kr. Under det opkræver vi et fast beløb på 89 kr pr. ordre.</p>
+  </div>
+
+  <div class="tm-faq-item">
+    <h3>Hvordan fungerer 30 dages money-back garanti?</h3>
+    <p>Prøv produktet derhjemme, og hvis det ikke er det rigtige, så opret en retur inden for 30 dage efter levering. Vi refunderer hele købsprisen, når varen er tilbage hos os. Trinnene finder du under <a href="/hc/{{current_locale.locale}}/p/returns">Sådan returnerer du en vare</a>.</p>
+  </div>
+
+  <div class="tm-faq-item">
+    <h3>Hvad dækker 3 års garanti?</h3>
+    <p>Fabrikations- og materialefejl i tre år fra levering – reparation, ombytning eller refusion. Sliddele som strenge, rør og trommeskind er undtaget. Detaljer under <a href="/hc/{{current_locale.locale}}/p/warranty-and-repairs">Garanti &amp; reparation</a>.</p>
+  </div>
+
+  <div class="tm-faq-item">
+    <h3>Hvilke betalingsmetoder accepterer I?</h3>
+    <p>Kort, PayPal, Klarna (inkl. rater) og bankoverførsel. Se <a href="/hc/{{current_locale.locale}}/p/payment-and-invoices">Betalingsmetoder &amp; fakturaer</a>.</p>
+  </div>
+
+  <div class="tm-faq-item">
+    <h3>Min track & trace er ikke opdateret – hvad gør jeg?</h3>
+    <p>Fragtfirmaernes systemer kan være op til 24 timer om at opdatere efter afsendelse. Sker der intet i tre hverdage, så kontakt os, så opretter vi en efterlysning hos fragtfirmaet. Mere under <a href="/hc/{{current_locale.locale}}/p/where-is-my-order">Hvor er min ordre?</a>.</p>
+  </div>
+
+  <div class="tm-faq-item">
+    <h3>Kan jeg få rådgivning, før jeg køber?</h3>
+    <p>Absolut. Vores produktspecialister er selv musikere – <a href="/hc/{{current_locale.locale}}/requests/new">send os en anmodning</a> med, hvad du spiller, og dit budget, så anbefaler vi det rigtige udstyr.</p>
+  </div>
+
+  <div class="tm-callout">
+    Fandt du ikke svar på dit spørgsmål? <a href="/hc/{{current_locale.locale}}/requests/new">Kontakt vores kundeservice</a>, så hjælper vi dig videre.
+  </div>
+  {{else}}
+  <div class="tm-faq-item">
     <h3>Can I change or cancel my order?</h3>
-    <p>Yes, as long as it hasn't been packed. Use <a href="/hc/en-us/p/cancel-a-shipment">Cancel a shipment</a> or contact us with your order number. Once the parcel is on its way, you can simply return it under the 30-day money-back guarantee.</p>
+    <p>Yes, as long as it hasn't been packed. Use <a href="/hc/{{current_locale.locale}}/p/cancel-a-shipment">Cancel a shipment</a> or contact us with your order number. Once the parcel is on its way, you can simply return it under the 30-day money-back guarantee.</p>
   </div>
 
   <div class="tm-faq-item">
     <h3>How long does delivery take?</h3>
-    <p>In-stock items ordered before 15:00 on weekdays ship the same day and arrive in Denmark within 2–4 working days. See <a href="/hc/en-us/p/shipping-and-delivery">Shipping &amp; delivery</a> for express and bulky-freight options.</p>
+    <p>In-stock items ordered before 15:00 on weekdays ship the same day and arrive in Denmark within 2–4 working days. See <a href="/hc/{{current_locale.locale}}/p/shipping-and-delivery">Shipping &amp; delivery</a> for express and bulky-freight options.</p>
   </div>
 
   <div class="tm-faq-item">
@@ -26,30 +71,31 @@
 
   <div class="tm-faq-item">
     <h3>How does the 30-day money-back guarantee work?</h3>
-    <p>Try the product at home and, if it isn't right, register a return within 30 days of delivery. We refund the full purchase price once the item is back with us. The steps are in <a href="/hc/en-us/p/returns">How to return an item</a>.</p>
+    <p>Try the product at home and, if it isn't right, register a return within 30 days of delivery. We refund the full purchase price once the item is back with us. The steps are in <a href="/hc/{{current_locale.locale}}/p/returns">How to return an item</a>.</p>
   </div>
 
   <div class="tm-faq-item">
     <h3>What does the 3-year warranty cover?</h3>
-    <p>Manufacturing and material defects for three years from delivery – repair, replacement or refund. Wear parts such as strings, tubes and drum heads are excluded. Details under <a href="/hc/en-us/p/warranty-and-repairs">Warranty &amp; repairs</a>.</p>
+    <p>Manufacturing and material defects for three years from delivery – repair, replacement or refund. Wear parts such as strings, tubes and drum heads are excluded. Details under <a href="/hc/{{current_locale.locale}}/p/warranty-and-repairs">Warranty &amp; repairs</a>.</p>
   </div>
 
   <div class="tm-faq-item">
     <h3>Which payment methods do you accept?</h3>
-    <p>Card, PayPal, Klarna (including instalments) and bank transfer. See <a href="/hc/en-us/p/payment-and-invoices">Payment methods &amp; invoices</a>.</p>
+    <p>Card, PayPal, Klarna (including instalments) and bank transfer. See <a href="/hc/{{current_locale.locale}}/p/payment-and-invoices">Payment methods &amp; invoices</a>.</p>
   </div>
 
   <div class="tm-faq-item">
     <h3>My tracking hasn't updated – what should I do?</h3>
-    <p>Carrier systems can take up to 24 hours to update after shipping. If nothing changes for three working days, contact us and we will open an enquiry with the carrier. More in <a href="/hc/en-us/p/where-is-my-order">Where is my order?</a>.</p>
+    <p>Carrier systems can take up to 24 hours to update after shipping. If nothing changes for three working days, contact us and we will open an enquiry with the carrier. More in <a href="/hc/{{current_locale.locale}}/p/where-is-my-order">Where is my order?</a>.</p>
   </div>
 
   <div class="tm-faq-item">
     <h3>Can I get advice before I buy?</h3>
-    <p>Absolutely. Our product specialists are musicians themselves – <a href="/hc/en-us/requests/new">send us a request</a> with what you play and your budget, and we will recommend the right gear.</p>
+    <p>Absolutely. Our product specialists are musicians themselves – <a href="/hc/{{current_locale.locale}}/requests/new">send us a request</a> with what you play and your budget, and we will recommend the right gear.</p>
   </div>
 
   <div class="tm-callout">
-    Didn't find an answer to your question? <a href="/hc/en-us/requests/new">Contact our customer service</a> and we'll help you further.
+    Didn't find an answer to your question? <a href="/hc/{{current_locale.locale}}/requests/new">Contact our customer service</a> and we'll help you further.
   </div>
+  {{/is}}
 </article>
