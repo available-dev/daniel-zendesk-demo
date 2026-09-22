@@ -77,9 +77,12 @@
       <div class="tm-actions">
         {{#if signed_in}}
           <div class="user-info dropdown">
-            <button class="dropdown-toggle tm-action" aria-haspopup="true" aria-expanded="false">
+            <button class="dropdown-toggle tm-action tm-user-toggle" aria-haspopup="true" aria-expanded="false">
               {{user_avatar class="user-avatar"}}
-              <span class="visibility-hidden">{{user_name}}</span>
+              <span class="tm-user-name">{{user_name}}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon" aria-hidden="true">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+              </svg>
             </button>
             <div class="dropdown-menu dropdown-menu-end" role="menu">
               {{#my_profile role="menuitem"}}{{t 'profile'}}{{/my_profile}}

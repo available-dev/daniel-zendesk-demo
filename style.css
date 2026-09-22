@@ -5172,6 +5172,17 @@ input[type=submit]:hover, input[type=submit]:focus {
 .tm-actions .user-info { display: inline-flex; }
 .tm-actions .user-info .user-avatar { width: 28px; height: 28px; }
 .tm-actions .user-info .dropdown-toggle::after { display: none; }
+.tm-actions .user-info > button.tm-user-toggle {
+  width: auto;
+  border-radius: 22px;
+  padding: 0 12px 0 6px;
+  gap: 8px;
+  font-family: var(--tm-font);
+  font-size: 14px;
+  font-weight: 600;
+}
+.tm-user-name { white-space: nowrap; max-width: 160px; overflow: hidden; text-overflow: ellipsis; }
+.tm-user-toggle .dropdown-chevron-icon { flex: none; }
 
 .tm-header .nav-wrapper-mobile { display: none; }
 .tm-header .nav-wrapper-mobile .menu-button-mobile { min-width: 0; }
