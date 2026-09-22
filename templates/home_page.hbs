@@ -1,89 +1,32 @@
 <h1 class="visibility-hidden">{{ help_center.name }}</h1>
 
-<section id="main-content" class="section hero shell-hero">
-  <div class="shell-hero-overlay"></div>
-  <div class="hero-inner">
-    <p class="shell-hero-eyebrow">Shell Biogas in Denmark</p>
-    <h2 class="shell-hero-title">Welcome to the Shell Biogas Help Center</h2>
-    <p class="shell-hero-lead">Find answers about biogas, green energy and our Danish production. Together with Nature Energy, Shell produces biomethane from waste and residual products – helping Denmark move forward in the green transition.</p>
-    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
-      <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
-      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
-    </svg>
-    {{search submit=false instant=settings.instant_search class='search search-full'}}
-    <p class="shell-hero-suggestions">Popular: <a href="/hc/en-us/p/hvad-er-biogas">What is biogas?</a> · <a href="/hc/en-us/p/shell-og-nature-energy">Shell &amp; Nature Energy</a> · <a href="/hc/en-us/p/ofte-stillede-spoergsmaal">Frequently asked questions</a></p>
-  </div>
-</section>
+<div class="tm-wrap">
+  <section id="main-content" class="tm-home-hero">
+    <h2 class="tm-welcome">Welcome to {{help_center.name}} <span aria-hidden="true">👋</span></h2>
 
-<div class="container">
-  <section class="section shell-featured">
-    <div class="shell-section-head">
-      <h2 class="shell-section-title">Explore biogas</h2>
-      <p class="shell-section-sub">The most-read articles about Shell Biogas and green gas.</p>
+    <div class="tm-banner">
+      <div class="tm-banner-copy">
+        <p class="tm-banner-kicker">Help Center</p>
+        <h3 class="tm-banner-title">How can we<br>help you today?</h3>
+        <p class="tm-banner-lead">Guides, answers and support for orders, delivery, returns and everything in between.</p>
+        <div class="tm-banner-actions">
+          <a href="#tm-categories" class="tm-btn tm-btn-light">Browse all topics</a>
+          {{#link 'new_request' class='tm-btn tm-btn-ghost'}}Contact support{{/link}}
+        </div>
+      </div>
     </div>
-    <ul class="shell-card-grid">
-      <li class="shell-card">
-        <a href="/hc/en-us/p/hvad-er-biogas" class="shell-card-link">
-          <span class="shell-card-tag">Basics</span>
-          <span class="shell-card-title">What is biogas?</span>
-          <span class="shell-card-text">Biomethane is CO₂-neutral energy produced from organic waste. Get an overview of how it works.</span>
-          <span class="shell-card-cta">Read article →</span>
-        </a>
-      </li>
-      <li class="shell-card">
-        <a href="/hc/en-us/p/saadan-produceres-biogas" class="shell-card-link">
-          <span class="shell-card-tag">Production</span>
-          <span class="shell-card-title">How biogas is produced</span>
-          <span class="shell-card-text">From manure and food scraps to green gas and natural fertiliser – step by step through the biogas plant.</span>
-          <span class="shell-card-cta">Read article →</span>
-        </a>
-      </li>
-      <li class="shell-card">
-        <a href="/hc/en-us/p/shell-og-nature-energy" class="shell-card-link">
-          <span class="shell-card-tag">About us</span>
-          <span class="shell-card-title">Shell &amp; Nature Energy</span>
-          <span class="shell-card-text">In 2023 Shell acquired Nature Energy – Europe's largest biogas producer. Read about what it means.</span>
-          <span class="shell-card-cta">Read article →</span>
-        </a>
-      </li>
-      <li class="shell-card">
-        <a href="/hc/en-us/p/biogas-til-transport" class="shell-card-link">
-          <span class="shell-card-tag">Transport</span>
-          <span class="shell-card-title">Biogas &amp; BioLNG for transport</span>
-          <span class="shell-card-text">Green gas can replace diesel in trucks and ships. See how biogas moves heavy transport forward.</span>
-          <span class="shell-card-cta">Read article →</span>
-        </a>
-      </li>
-      <li class="shell-card">
-        <a href="/hc/en-us/p/groen-gas-til-hjemmet" class="shell-card-link">
-          <span class="shell-card-tag">Home</span>
-          <span class="shell-card-title">Green gas for the home</span>
-          <span class="shell-card-text">Biomethane flows into the ordinary gas grid and heats Danish homes in a climate-friendly way.</span>
-          <span class="shell-card-cta">Read article →</span>
-        </a>
-      </li>
-      <li class="shell-card">
-        <a href="/hc/en-us/p/ofte-stillede-spoergsmaal" class="shell-card-link">
-          <span class="shell-card-tag">FAQ</span>
-          <span class="shell-card-title">Frequently asked questions</span>
-          <span class="shell-card-text">Answers to the questions we get most often about biogas, sustainability, odour and local plants.</span>
-          <span class="shell-card-cta">Read article →</span>
-        </a>
-      </li>
+
+    <ul class="tm-usps">
+      <li><span class="tm-hex tm-hex-blue">30</span><span>Days money-back guarantee</span></li>
+      <li><span class="tm-hex tm-hex-green">3</span><span>Years warranty</span></li>
+      <li><span class="tm-hex tm-hex-purple"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 4h13v11H1zM14 8h4l3 3v4h-7z"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg></span><span>Free delivery from 1,100 kr</span></li>
+      <li><span class="tm-hex tm-hex-orange"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span>Best service in Europe</span></li>
+      <li><span class="tm-hex tm-hex-navy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-6 9 6v11H3z"/><path d="M9 20v-7h6v7"/></svg></span><span>Europe's largest music warehouse</span></li>
     </ul>
   </section>
 
-  <section class="shell-band">
-    <div class="shell-band-grid">
-      <div class="shell-band-stat"><span class="shell-band-num">14+</span><span class="shell-band-label">biogas plants in Denmark</span></div>
-      <div class="shell-band-stat"><span class="shell-band-num">#1</span><span class="shell-band-label">Europe's largest biogas producer</span></div>
-      <div class="shell-band-stat"><span class="shell-band-num">CO₂</span><span class="shell-band-label">-neutral green gas from waste</span></div>
-      <div class="shell-band-stat"><span class="shell-band-num">100%</span><span class="shell-band-label">circular – residue becomes fertiliser</span></div>
-    </div>
-  </section>
-
-  <section class="section knowledge-base">
-    <h2 class="visibility-hidden">{{ t 'categories' }}</h2>
+  <section id="tm-categories" class="tm-section knowledge-base">
+    <h2 class="tm-h2">All categories</h2>
     <section class="categories blocks">
       <ul class="blocks-list">
         {{#each categories}}
@@ -98,9 +41,7 @@
             {{#each sections}}
               <li class="blocks-item">
                 <a href='{{url}}' class="blocks-item-link">
-                  <span class="blocks-item-title">
-                    {{name}}
-                  </span>
+                  <span class="blocks-item-title">{{name}}</span>
                   <span class="blocks-item-description">{{excerpt description}}</span>
                 </a>
               </li>
@@ -110,48 +51,101 @@
       </ul>
       {{pagination}}
     </section>
-
-    {{#if promoted_articles}}
-      <section class="articles">
-        <h2>{{t 'promoted_articles'}}</h2>
-        <ul class="article-list promoted-articles">
-          {{#each promoted_articles}}
-            <li class="promoted-articles-item">
-                <a href="{{url}}">
-                  {{title}}
-
-                  {{#if internal}}
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
-                      <rect width="12" height="9" x="2" y="7" fill="currentColor" rx="1" ry="1"/>
-                      <path fill="none" stroke="currentColor" d="M4.5 7.5V4a3.5 3.5 0 017 0v3.5"/>
-                    </svg>
-                  {{/if}}
-                </a>
-            </li>
-          {{/each}}
-        </ul>
-      </section>
-    {{/if}}
   </section>
 
-  <section class="shell-contact-band">
-    <div class="shell-contact-inner">
-      <div>
-        <h2 class="shell-contact-title">Didn't find an answer?</h2>
-        <p class="shell-contact-text">Our customer service team is ready to help you with questions about biogas, delivery and partnership.</p>
-      </div>
-      {{#link 'new_request' class='button button-large shell-contact-btn'}}Contact us{{/link}}
+  <section class="tm-section tm-featured">
+    <h2 class="tm-h2"><span class="tm-underline">Popular guides</span></h2>
+    <div class="tm-tabs" aria-hidden="true">
+      <span class="tm-tab is-active">most read</span>
+      <span class="tm-tab">latest</span>
     </div>
+    <ul class="tm-card-grid">
+      <li class="tm-card">
+        <a href="/hc/en-us/p/hvad-er-biogas" class="tm-card-link">
+          <span class="tm-card-media" aria-hidden="true">🌱</span>
+          <span class="tm-card-tag">Basics</span>
+          <span class="tm-card-title">What is biogas?</span>
+          <span class="tm-card-text">Biomethane is CO₂-neutral energy produced from organic waste. Get an overview of how it works.</span>
+        </a>
+      </li>
+      <li class="tm-card">
+        <a href="/hc/en-us/p/saadan-produceres-biogas" class="tm-card-link">
+          <span class="tm-card-media" aria-hidden="true">🏭</span>
+          <span class="tm-card-tag">Production</span>
+          <span class="tm-card-title">How biogas is produced</span>
+          <span class="tm-card-text">From manure and food scraps to green gas and natural fertiliser – step by step through the plant.</span>
+        </a>
+      </li>
+      <li class="tm-card">
+        <a href="/hc/en-us/p/shell-og-nature-energy" class="tm-card-link">
+          <span class="tm-card-media" aria-hidden="true">🤝</span>
+          <span class="tm-card-tag">About us</span>
+          <span class="tm-card-title">Shell &amp; Nature Energy</span>
+          <span class="tm-card-text">In 2023 Shell acquired Nature Energy – Europe's largest biogas producer. Read about what it means.</span>
+        </a>
+      </li>
+      <li class="tm-card">
+        <a href="/hc/en-us/p/biogas-til-transport" class="tm-card-link">
+          <span class="tm-card-media" aria-hidden="true">🚛</span>
+          <span class="tm-card-tag">Transport</span>
+          <span class="tm-card-title">Biogas &amp; BioLNG for transport</span>
+          <span class="tm-card-text">Green gas can replace diesel in trucks and ships. See how biogas moves heavy transport forward.</span>
+        </a>
+      </li>
+      <li class="tm-card">
+        <a href="/hc/en-us/p/groen-gas-til-hjemmet" class="tm-card-link">
+          <span class="tm-card-media" aria-hidden="true">🏠</span>
+          <span class="tm-card-tag">Home</span>
+          <span class="tm-card-title">Green gas for the home</span>
+          <span class="tm-card-text">Biomethane flows into the ordinary gas grid and heats Danish homes in a climate-friendly way.</span>
+        </a>
+      </li>
+      <li class="tm-card">
+        <a href="/hc/en-us/p/ofte-stillede-spoergsmaal" class="tm-card-link">
+          <span class="tm-card-media" aria-hidden="true">❓</span>
+          <span class="tm-card-tag">FAQ</span>
+          <span class="tm-card-title">Frequently asked questions</span>
+          <span class="tm-card-text">Answers to the questions we get most often about biogas, sustainability, odour and local plants.</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  {{#if promoted_articles}}
+    <section class="tm-section articles">
+      <h2 class="tm-h2"><span class="tm-underline tm-underline-cyan">{{t 'promoted_articles'}}</span></h2>
+      <ul class="article-list promoted-articles">
+        {{#each promoted_articles}}
+          <li class="promoted-articles-item">
+            <a href="{{url}}">
+              {{title}}
+              {{#if internal}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
+                  <rect width="12" height="9" x="2" y="7" fill="currentColor" rx="1" ry="1"/>
+                  <path fill="none" stroke="currentColor" d="M4.5 7.5V4a3.5 3.5 0 017 0v3.5"/>
+                </svg>
+              {{/if}}
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </section>
+  {{/if}}
+
+  <section class="tm-section tm-feedback">
+    <h2 class="tm-feedback-title">Want to share something with us, or have a question?</h2>
+    {{#link 'new_request' class='tm-btn'}}
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a2 2 0 0 0 2 2h2l5 4V5L7 9H5a2 2 0 0 0-2 2z"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg>
+      Help and feedback
+    {{/link}}
   </section>
 
   {{#if help_center.community_enabled}}
     <section class="section home-section community">
-      <h2>{{t 'community'}}</h2>
-      {{#link 'community' class='community-link'}}
+      <h2 class="tm-h2">{{t 'community'}}</h2>
+      {{#link 'community' class='tm-btn tm-btn-outline community-link'}}
         {{t 'join_conversation'}}
       {{/link}}
-
-      <div class="community-image"></div>
     </section>
   {{/if}}
 

@@ -1,101 +1,152 @@
 <a class="skip-navigation" tabindex="1" href="#main-content">{{t 'skip_navigation' }}</a>
 
-<header class="header">
-  <div class="logo shell-logo">
-    {{#link 'help_center'}}
-      {{#if settings.show_brand_name}}
-        <span class="shell-wordmark" aria-hidden="true">Shell</span>
-      {{/if}}
-      <span class="visibility-hidden">{{t 'home_page' name=help_center.name}}</span>
-    {{/link}}
+<header class="header tm-header">
+  <div class="tm-promo">
+    <div class="tm-wrap tm-promo-inner">
+      <span>Need help with an order? Our support team replies within 24 hours –</span>
+      {{#link 'new_request'}}Contact us now{{/link}}
+    </div>
   </div>
 
-  <div class="nav-wrapper-desktop">
-    <nav class="user-nav" id="user-nav" aria-label="{{t 'user_navigation'}}">
-      <ul class="user-nav-list">
-        <li>{{link 'community'}}</li>
-        <li>{{link 'service_catalog'}}</li>
-        <li>{{link 'new_request' class='submit-a-request'}}</li>
-        {{#unless signed_in}}
+  <div class="tm-topbar">
+    <div class="tm-wrap tm-topbar-inner">
+      <div class="logo tm-logo">
+        {{#link 'help_center'}}
+          <span class="tm-wordmark" aria-hidden="true">th<span class="tm-dot"></span>mann</span>
+          <span class="visibility-hidden">{{t 'home_page' name=help_center.name}}</span>
+        {{/link}}
+      </div>
+
+      <p class="tm-topbar-note">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M1 4h13v11H1zM14 8h4l3 3v4h-7z"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg>
+        free shipping from 1,100 kr
+      </p>
+
+      <ul class="tm-topbar-links">
+        <li>{{#link 'new_request'}}Contact{{/link}}</li>
+        <li><a href="https://www.thomann.dk/" rel="noopener" target="_blank">thomann.dk</a></li>
+        <li class="tm-locale">
+          {{#if alternative_locales}}
+            <div class="dropdown language-selector">
+              <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                <span class="tm-flag" aria-hidden="true"></span>
+                {{current_locale.name}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon" aria-hidden="true">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+                </svg>
+              </button>
+              <span class="dropdown-menu dropdown-menu-end" role="menu">
+                {{#each alternative_locales}}
+                  <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">{{name}}</a>
+                {{/each}}
+              </span>
+            </div>
+          {{else}}
+            <span class="tm-locale-static"><span class="tm-flag" aria-hidden="true"></span>{{current_locale.name}}</span>
+          {{/if}}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tm-navbar">
+    <div class="tm-wrap tm-navbar-inner">
+      <nav class="tm-mainnav" aria-label="{{t 'user_navigation'}}">
+        <ul>
           <li>
-            {{#link "sign_in" class="sign-in" role="link"}}
-              {{t 'sign_in'}}
+            {{#link 'help_center'}}
+              Help topics
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" focusable="false" viewBox="0 0 12 12" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/></svg>
             {{/link}}
           </li>
-        {{/unless}}
-      </ul>
-    </nav>
-    {{#if signed_in}}
-      <div class="user-info dropdown">
-        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-          {{user_avatar class="user-avatar"}}
-          <span>
-            {{user_name}}
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon" aria-hidden="true">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-          </span>
-        </button>
-        <div class="dropdown-menu" role="menu">
-          {{#my_profile role="menuitem"}}{{t 'profile'}}{{/my_profile}}
-          {{link "requests" role="menuitem"}}
-          {{#link "contributions" role="menuitem"}}{{t "activities"}}{{/link}}
-          {{link "approval_requests" role="menuitem"}}
-          {{contact_details role="menuitem"}}
-          {{change_password role="menuitem"}}
-          <div class="separator" role="separator"></div>
-          {{link "sign_out" role="menuitem"}}
+          <li>
+            {{#link 'service_catalog'}}
+              Service
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" focusable="false" viewBox="0 0 12 12" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/></svg>
+            {{/link}}
+          </li>
+          <li>{{link 'community'}}</li>
+        </ul>
+      </nav>
+
+      <div class="tm-search">
+        {{search submit=false instant=settings.instant_search class='search tm-search-form' placeholder='What are you looking for?'}}
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M21 21l-5-5"/></svg>
+      </div>
+
+      <div class="tm-actions">
+        {{#if signed_in}}
+          <div class="user-info dropdown">
+            <button class="dropdown-toggle tm-action" aria-haspopup="true" aria-expanded="false" title="{{user_name}}">
+              {{user_avatar class="user-avatar"}}
+              <span class="visibility-hidden">{{user_name}}</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end" role="menu">
+              {{#my_profile role="menuitem"}}{{t 'profile'}}{{/my_profile}}
+              {{link "requests" role="menuitem"}}
+              {{#link "contributions" role="menuitem"}}{{t "activities"}}{{/link}}
+              {{link "approval_requests" role="menuitem"}}
+              {{contact_details role="menuitem"}}
+              {{change_password role="menuitem"}}
+              <div class="separator" role="separator"></div>
+              {{link "sign_out" role="menuitem"}}
+            </div>
+          </div>
+        {{else}}
+          {{#link "sign_in" class="tm-action sign-in" role="link" title=(t 'sign_in')}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3.2"/><path d="M6.2 18.5c1.3-2.4 3.4-3.6 5.8-3.6s4.5 1.2 5.8 3.6"/></svg>
+            <span class="visibility-hidden">{{t 'sign_in'}}</span>
+          {{/link}}
+        {{/if}}
+
+        {{#link "requests" class="tm-action" title="My requests"}}
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20.5s-8-4.6-8-10.4A4.4 4.4 0 0 1 12 7.3a4.4 4.4 0 0 1 8 2.8c0 5.8-8 10.4-8 10.4z"/></svg>
+          <span class="visibility-hidden">My requests</span>
+        {{/link}}
+
+        {{#link "new_request" class="tm-action" title="Submit a request"}}
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12.5h5"/></svg>
+          <span class="visibility-hidden">Submit a request</span>
+        {{/link}}
+
+        <div class="nav-wrapper-mobile">
+          <button class="menu-button-mobile tm-action" aria-controls="user-nav-mobile" aria-expanded="false" aria-label="{{t 'toggle_navigation'}}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" focusable="false" viewBox="0 0 24 24" class="icon-menu" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
+          <nav class="menu-list-mobile" id="user-nav-mobile" aria-expanded="false">
+            <ul class="menu-list-mobile-items">
+              {{#if signed_in}}
+                <li class="user-avatar-item item">
+                  {{#my_profile class="my-profile"}}
+                    {{user_avatar class="menu-profile-avatar"}}
+                    <div class="menu-profile-name">
+                      <div>{{user_name}}</div>
+                      <div class="my-profile-tooltip">{{t 'profile'}}</div>
+                    </div>
+                  {{/my_profile}}
+                </li>
+                <li class="item">{{link "requests"}}</li>
+                <li class="item">{{#link "contributions"}}{{t "activities"}}{{/link}}</li>
+                <li class="item">{{link "approval_requests"}}</li>
+                <li class="item">{{contact_details}}</li>
+                <li class="item">{{change_password class='change-password'}}</li>
+                <li class="nav-divider"></li>
+              {{else}}
+                <li class="item">{{#link "sign_in" role="link"}}{{t 'sign_in'}}{{/link}}</li>
+                <li class="nav-divider"></li>
+              {{/if}}
+              <li class="item">{{#link 'help_center'}}Help topics{{/link}}</li>
+              <li class="item">{{link 'service_catalog'}}</li>
+              <li class="item">{{link 'community'}}</li>
+              <li class="item">{{link 'new_request' class='submit-a-request'}}</li>
+              <li class="nav-divider"></li>
+              {{#if signed_in}}
+                <li class="item">{{link "sign_out"}}</li>
+              {{/if}}
+            </ul>
+          </nav>
         </div>
       </div>
-    {{/if}}
+    </div>
   </div>
-
-  <div class="nav-wrapper-mobile">
-    <button class="menu-button-mobile" aria-controls="user-nav-mobile" aria-expanded="false" aria-label="{{t 'toggle_navigation'}}">
-      {{#if signed_in}}
-        {{user_avatar class="user-avatar"}}
-      {{/if}}
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-menu">
-        <path fill="none" stroke="currentColor" stroke-linecap="round" d="M1.5 3.5h13m-13 4h13m-13 4h13"/>
-      </svg>
-    </button>
-    <nav class="menu-list-mobile" id="user-nav-mobile" aria-expanded="false">
-      <ul class="menu-list-mobile-items">
-        {{#if signed_in}}
-          <li class="user-avatar-item item">
-            {{#my_profile class="my-profile"}}
-              {{user_avatar class="menu-profile-avatar"}}
-              <div class="menu-profile-name">
-                <div>{{user_name}}</div>
-                <div class="my-profile-tooltip">{{t 'profile'}}</div>
-              </div>
-            {{/my_profile}}
-          </li>
-          <li class="item">{{link "requests"}}</li>
-          <li class="item">{{#link "contributions"}}{{t "activities"}}{{/link}}</li>
-          <li class="item">{{link "approval_requests"}}</li>
-          <li class="item">{{contact_details}}</li>
-          <li class="item">{{change_password class='change-password'}}</li>
-          <li class="nav-divider"></li>
-        {{else}}
-          <li class="item">
-            {{#link "sign_in" role="link"}}
-              {{t 'sign_in'}}
-            {{/link}}
-          </li>
-          <li class="nav-divider"></li>
-        {{/if}}
-        <li class="item">{{link 'community'}}</li>
-        <li class="item">{{link 'new_request' class='submit-a-request'}}</li>
-        <li class="item">{{link 'service_catalog'}}</li>
-        <li class="nav-divider"></li>
-        {{#if signed_in}}
-          <li class="item">
-            {{link "sign_out"}}
-          </li>
-        {{/if}}
-      </ul>
-    </nav>
-  </div>
-
 </header>
