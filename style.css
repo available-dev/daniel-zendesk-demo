@@ -5431,6 +5431,10 @@ input[type=submit]:hover, input[type=submit]:focus {
 .tm-footer-legal { margin: 0 0 4px; color: rgba(255,255,255,0.88); }
 .tm-footer-slogan { margin: 0; font-weight: 700; font-style: italic; color: #fff; }
 
+/* ---- Language blocks in custom pages (switch on <html lang>) ---- */
+html:not([lang^="da" i]) .tm-lang[lang="da"] { display: none; }
+html[lang^="da" i] .tm-lang[lang="en"] { display: none; }
+
 /* ---- Custom guide pages ---- */
 .tm-article-hero {
   background: var(--tm-lavender);

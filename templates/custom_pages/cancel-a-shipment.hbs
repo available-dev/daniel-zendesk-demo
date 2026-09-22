@@ -180,7 +180,7 @@
     error: 'An error occurred. Please try again.'
   };
   // Danish copy when the help center is viewed in Danish
-  var LOCALE = '{{current_locale.locale}}';
+  var LOCALE = (location.pathname.match(/^\/hc\/([a-z]{2}(?:-[a-z0-9]+)?)(?:\/|$)/i) || [null, 'en-us'])[1].toLowerCase();
   if (LOCALE.indexOf('da') === 0) {
     t = {
       title: 'Fortryd afsendelse',

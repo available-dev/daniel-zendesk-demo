@@ -1,15 +1,15 @@
 <div class="tm-article-hero">
   <div class="tm-article-inner">
-    <p class="tm-article-eyebrow">{{#is current_locale.locale 'da'}}Ordrer{{else}}Orders{{/is}}</p>
-    <h1 class="tm-article-title">{{#is current_locale.locale 'da'}}Hvor er min ordre?{{else}}Where is my order?{{/is}}</h1>
-    <p class="tm-article-sub">{{#is current_locale.locale 'da'}}Sådan tjekker du status på din ordre, finder dit track & trace-nummer og forstår, hvad hver status betyder.{{else}}How to check the status of your order, find your tracking number and know what each status means.{{/is}}</p>
+    <p class="tm-article-eyebrow"><span class="tm-lang" lang="da">Ordrer</span><span class="tm-lang" lang="en">Orders</span></p>
+    <h1 class="tm-article-title"><span class="tm-lang" lang="da">Hvor er min ordre?</span><span class="tm-lang" lang="en">Where is my order?</span></h1>
+    <p class="tm-article-sub"><span class="tm-lang" lang="da">Sådan tjekker du status på din ordre, finder dit track & trace-nummer og forstår, hvad hver status betyder.</span><span class="tm-lang" lang="en">How to check the status of your order, find your tracking number and know what each status means.</span></p>
   </div>
 </div>
 
 <article class="tm-article">
-  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{#is current_locale.locale 'da'}}Hjælpecenter{{else}}Help Center{{/is}}</a> / {{#is current_locale.locale 'da'}}Hvor er min ordre?{{else}}Where is my order?{{/is}}</nav>
+  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}"><span class="tm-lang" lang="da">Hjælpecenter</span><span class="tm-lang" lang="en">Help Center</span></a> / <span class="tm-lang" lang="da">Hvor er min ordre?</span><span class="tm-lang" lang="en">Where is my order?</span></nav>
 
-  {{#is current_locale.locale 'da'}}
+  <div class="tm-lang" lang="da">
   <p>Så snart din ordre er afgivet, modtager du en ordrebekræftelse på e-mail. Fra det øjeblik kan du følge hvert trin – fra plukning på vores lager til levering ved din dør – under <strong>Min konto</strong> → <strong>Ordrer</strong>.</p>
 
   <div class="tm-callout">
@@ -29,8 +29,9 @@
   <p>Nogle produkter vises med en forventet leveringsdato. Indeholder din ordre sådan en vare, holder vi hele ordren tilbage, indtil alt er på lager. Vil du hellere modtage de tilgængelige varer først? Kontakt os, så deler vi forsendelsen op for dig.</p>
 
   <h2>Track & trace viser ingen bevægelse</h2>
-  <p>Der kan gå op til 24 timer efter afsendelse, før fragtfirmaets system opdaterer. Har track & trace ikke ændret sig i mere end tre hverdage, så <a href="/hc/{{current_locale.locale}}/requests/new">kontakt os</a> med dit ordrenummer, så opretter vi straks en efterlysning hos fragtfirmaet.</p>
-  {{else}}
+  <p>Der kan gå op til 24 timer efter afsendelse, før fragtfirmaets system opdaterer. Har track & trace ikke ændret sig i mere end tre hverdage, så <a href="/hc/requests/new">kontakt os</a> med dit ordrenummer, så opretter vi straks en efterlysning hos fragtfirmaet.</p>
+  </div>
+  <div class="tm-lang" lang="en">
   <p>As soon as your order is placed you receive an order confirmation by email. From that moment you can follow every step – from picking in our warehouse to delivery at your door – in <strong>My account</strong> under <strong>Orders</strong>.</p>
 
   <div class="tm-callout">
@@ -50,15 +51,15 @@
   <p>Some products are shown with an expected availability date. If your order contains such an item, we hold the complete order until everything is in stock. Prefer to receive the available items first? Contact us and we will split the shipment for you.</p>
 
   <h2>Tracking shows no movement</h2>
-  <p>It can take up to 24 hours after shipping before the carrier's system updates. If the tracking has not changed for more than three working days, <a href="/hc/{{current_locale.locale}}/requests/new">get in touch</a> with your order number and we will open an enquiry with the carrier straight away.</p>
-  {{/is}}
+  <p>It can take up to 24 hours after shipping before the carrier's system updates. If the tracking has not changed for more than three working days, <a href="/hc/requests/new">get in touch</a> with your order number and we will open an enquiry with the carrier straight away.</p>
+  </div>
 
   <div class="tm-related">
-    <h2>{{#is current_locale.locale 'da'}}Læs også{{else}}Read also{{/is}}</h2>
+    <h2><span class="tm-lang" lang="da">Læs også</span><span class="tm-lang" lang="en">Read also</span></h2>
     <ul class="tm-related-links">
-      <li><a href="/hc/{{current_locale.locale}}/p/shipping-and-delivery">{{#is current_locale.locale 'da'}}Forsendelse &amp; levering{{else}}Shipping &amp; delivery{{/is}}</a></li>
-      <li><a href="/hc/{{current_locale.locale}}/p/cancel-a-shipment">{{#is current_locale.locale 'da'}}Fortryd en afsendelse{{else}}Cancel a shipment{{/is}}</a></li>
-      <li><a href="/hc/{{current_locale.locale}}/p/faq">{{#is current_locale.locale 'da'}}Ofte stillede spørgsmål{{else}}Frequently asked questions{{/is}}</a></li>
+      <li><a href="/hc/p/shipping-and-delivery"><span class="tm-lang" lang="da">Forsendelse &amp; levering</span><span class="tm-lang" lang="en">Shipping &amp; delivery</span></a></li>
+      <li><a href="/hc/p/cancel-a-shipment"><span class="tm-lang" lang="da">Fortryd en afsendelse</span><span class="tm-lang" lang="en">Cancel a shipment</span></a></li>
+      <li><a href="/hc/p/faq"><span class="tm-lang" lang="da">Ofte stillede spørgsmål</span><span class="tm-lang" lang="en">Frequently asked questions</span></a></li>
     </ul>
   </div>
 </article>

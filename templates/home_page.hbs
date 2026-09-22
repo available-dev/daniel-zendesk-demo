@@ -2,31 +2,31 @@
 
 <div class="tm-wrap">
   <section id="main-content" class="tm-home-hero">
-    <h2 class="tm-welcome">{{#is current_locale.locale 'da'}}Velkommen til{{else}}Welcome to{{/is}} {{help_center.name}} <span aria-hidden="true">👋</span></h2>
+    <h2 class="tm-welcome">{{#is help_center.locale 'da'}}Velkommen til{{else}}Welcome to{{/is}} {{help_center.name}} <span aria-hidden="true">👋</span></h2>
 
     <div class="tm-banner">
       <div class="tm-banner-copy">
-        <p class="tm-banner-kicker">{{#is current_locale.locale 'da'}}Hjælpecenter{{else}}Help Center{{/is}}</p>
-        <h3 class="tm-banner-title">{{#is current_locale.locale 'da'}}Hvordan kan vi hjælpe dig i dag?{{else}}How can we help you today?{{/is}}</h3>
-        <p class="tm-banner-lead">{{#is current_locale.locale 'da'}}Guides, svar og support til ordrer, levering, returnering og alt derimellem.{{else}}Guides, answers and support for orders, delivery, returns and everything in between.{{/is}}</p>
+        <p class="tm-banner-kicker">{{#is help_center.locale 'da'}}Hjælpecenter{{else}}Help Center{{/is}}</p>
+        <h3 class="tm-banner-title">{{#is help_center.locale 'da'}}Hvordan kan vi hjælpe dig i dag?{{else}}How can we help you today?{{/is}}</h3>
+        <p class="tm-banner-lead">{{#is help_center.locale 'da'}}Guides, svar og support til ordrer, levering, returnering og alt derimellem.{{else}}Guides, answers and support for orders, delivery, returns and everything in between.{{/is}}</p>
         <div class="tm-banner-actions">
-          <a href="#tm-categories" class="tm-btn tm-btn-light">{{#is current_locale.locale 'da'}}Se alle emner{{else}}Browse all topics{{/is}}</a>
-          {{#link 'new_request' class='tm-btn tm-btn-ghost'}}{{#is current_locale.locale 'da'}}Kontakt support{{else}}Contact support{{/is}}{{/link}}
+          <a href="#tm-categories" class="tm-btn tm-btn-light">{{#is help_center.locale 'da'}}Se alle emner{{else}}Browse all topics{{/is}}</a>
+          {{#link 'new_request' class='tm-btn tm-btn-ghost'}}{{#is help_center.locale 'da'}}Kontakt support{{else}}Contact support{{/is}}{{/link}}
         </div>
       </div>
     </div>
 
     <ul class="tm-usps">
-      <li><span class="tm-hex tm-hex-blue">30</span><span>{{#is current_locale.locale 'da'}}Dages money-back garanti{{else}}Days money-back guarantee{{/is}}</span></li>
-      <li><span class="tm-hex tm-hex-green">3</span><span>{{#is current_locale.locale 'da'}}Års garanti{{else}}Years warranty{{/is}}</span></li>
-      <li><span class="tm-hex tm-hex-purple"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 4h13v11H1zM14 8h4l3 3v4h-7z"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg></span><span>{{#is current_locale.locale 'da'}}Gratis levering fra 1.100 kr{{else}}Free delivery from 1,100 kr{{/is}}</span></li>
-      <li><span class="tm-hex tm-hex-orange"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span>{{#is current_locale.locale 'da'}}Bedste service i Europa{{else}}Best service in Europe{{/is}}</span></li>
-      <li><span class="tm-hex tm-hex-navy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-6 9 6v11H3z"/><path d="M9 20v-7h6v7"/></svg></span><span>{{#is current_locale.locale 'da'}}Europas største musiklager{{else}}Europe's largest music warehouse{{/is}}</span></li>
+      <li><span class="tm-hex tm-hex-blue">30</span><span>{{#is help_center.locale 'da'}}Dages money-back garanti{{else}}Days money-back guarantee{{/is}}</span></li>
+      <li><span class="tm-hex tm-hex-green">3</span><span>{{#is help_center.locale 'da'}}Års garanti{{else}}Years warranty{{/is}}</span></li>
+      <li><span class="tm-hex tm-hex-purple"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 4h13v11H1zM14 8h4l3 3v4h-7z"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg></span><span>{{#is help_center.locale 'da'}}Gratis levering fra 1.100 kr{{else}}Free delivery from 1,100 kr{{/is}}</span></li>
+      <li><span class="tm-hex tm-hex-orange"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span>{{#is help_center.locale 'da'}}Bedste service i Europa{{else}}Best service in Europe{{/is}}</span></li>
+      <li><span class="tm-hex tm-hex-navy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-6 9 6v11H3z"/><path d="M9 20v-7h6v7"/></svg></span><span>{{#is help_center.locale 'da'}}Europas største musiklager{{else}}Europe's largest music warehouse{{/is}}</span></li>
     </ul>
   </section>
 
   <section id="tm-categories" class="tm-section knowledge-base">
-    <h2 class="tm-h2">{{#is current_locale.locale 'da'}}Alle kategorier{{else}}All categories{{/is}}</h2>
+    <h2 class="tm-h2">{{#is help_center.locale 'da'}}Alle kategorier{{else}}All categories{{/is}}</h2>
     <section class="categories blocks">
       <ul class="blocks-list">
         {{#each categories}}
@@ -54,58 +54,58 @@
   </section>
 
   <section class="tm-section tm-featured">
-    <h2 class="tm-h2"><span class="tm-underline">{{#is current_locale.locale 'da'}}Populære guides{{else}}Popular guides{{/is}}</span></h2>
+    <h2 class="tm-h2"><span class="tm-underline">{{#is help_center.locale 'da'}}Populære guides{{else}}Popular guides{{/is}}</span></h2>
     <div class="tm-tabs" aria-hidden="true">
-      <span class="tm-tab is-active">{{#is current_locale.locale 'da'}}mest læste{{else}}most read{{/is}}</span>
-      <span class="tm-tab">{{#is current_locale.locale 'da'}}nyeste{{else}}latest{{/is}}</span>
+      <span class="tm-tab is-active">{{#is help_center.locale 'da'}}mest læste{{else}}most read{{/is}}</span>
+      <span class="tm-tab">{{#is help_center.locale 'da'}}nyeste{{else}}latest{{/is}}</span>
     </div>
     <ul class="tm-card-grid">
       <li class="tm-card">
-        <a href="/hc/{{current_locale.locale}}/p/where-is-my-order" class="tm-card-link">
+        <a href="/hc/{{help_center.locale}}/p/where-is-my-order" class="tm-card-link">
           <span class="tm-card-media" aria-hidden="true">📦</span>
-          <span class="tm-card-tag">{{#is current_locale.locale 'da'}}Ordrer{{else}}Orders{{/is}}</span>
-          <span class="tm-card-title">{{#is current_locale.locale 'da'}}Hvor er min ordre?{{else}}Where is my order?{{/is}}</span>
-          <span class="tm-card-text">{{#is current_locale.locale 'da'}}Tjek din ordrestatus, find dit track &amp; trace-nummer og se, hvad hver status betyder.{{else}}Check your order status, find the tracking number and see what each status means.{{/is}}</span>
+          <span class="tm-card-tag">{{#is help_center.locale 'da'}}Ordrer{{else}}Orders{{/is}}</span>
+          <span class="tm-card-title">{{#is help_center.locale 'da'}}Hvor er min ordre?{{else}}Where is my order?{{/is}}</span>
+          <span class="tm-card-text">{{#is help_center.locale 'da'}}Tjek din ordrestatus, find dit track &amp; trace-nummer og se, hvad hver status betyder.{{else}}Check your order status, find the tracking number and see what each status means.{{/is}}</span>
         </a>
       </li>
       <li class="tm-card">
-        <a href="/hc/{{current_locale.locale}}/p/shipping-and-delivery" class="tm-card-link">
+        <a href="/hc/{{help_center.locale}}/p/shipping-and-delivery" class="tm-card-link">
           <span class="tm-card-media" aria-hidden="true">🚚</span>
-          <span class="tm-card-tag">{{#is current_locale.locale 'da'}}Levering{{else}}Delivery{{/is}}</span>
-          <span class="tm-card-title">{{#is current_locale.locale 'da'}}Forsendelse &amp; levering{{else}}Shipping &amp; delivery{{/is}}</span>
-          <span class="tm-card-text">{{#is current_locale.locale 'da'}}Leveringstider, fragtpriser og hvad du gør, hvis en pakke ankommer beskadiget.{{else}}Delivery times, shipping costs and what to do if a parcel arrives damaged.{{/is}}</span>
+          <span class="tm-card-tag">{{#is help_center.locale 'da'}}Levering{{else}}Delivery{{/is}}</span>
+          <span class="tm-card-title">{{#is help_center.locale 'da'}}Forsendelse &amp; levering{{else}}Shipping &amp; delivery{{/is}}</span>
+          <span class="tm-card-text">{{#is help_center.locale 'da'}}Leveringstider, fragtpriser og hvad du gør, hvis en pakke ankommer beskadiget.{{else}}Delivery times, shipping costs and what to do if a parcel arrives damaged.{{/is}}</span>
         </a>
       </li>
       <li class="tm-card">
-        <a href="/hc/{{current_locale.locale}}/p/returns" class="tm-card-link">
+        <a href="/hc/{{help_center.locale}}/p/returns" class="tm-card-link">
           <span class="tm-card-media" aria-hidden="true">↩️</span>
-          <span class="tm-card-tag">{{#is current_locale.locale 'da'}}Returnering{{else}}Returns{{/is}}</span>
-          <span class="tm-card-title">{{#is current_locale.locale 'da'}}Sådan returnerer du en vare{{else}}How to return an item{{/is}}</span>
-          <span class="tm-card-text">{{#is current_locale.locale 'da'}}Opret en retur, print labelen og få pengene tilbage – 30 dages money-back garanti trin for trin.{{else}}Register a return, print the label and get your refund – the 30-day money-back guarantee step by step.{{/is}}</span>
+          <span class="tm-card-tag">{{#is help_center.locale 'da'}}Returnering{{else}}Returns{{/is}}</span>
+          <span class="tm-card-title">{{#is help_center.locale 'da'}}Sådan returnerer du en vare{{else}}How to return an item{{/is}}</span>
+          <span class="tm-card-text">{{#is help_center.locale 'da'}}Opret en retur, print labelen og få pengene tilbage – 30 dages money-back garanti trin for trin.{{else}}Register a return, print the label and get your refund – the 30-day money-back guarantee step by step.{{/is}}</span>
         </a>
       </li>
       <li class="tm-card">
-        <a href="/hc/{{current_locale.locale}}/p/warranty-and-repairs" class="tm-card-link">
+        <a href="/hc/{{help_center.locale}}/p/warranty-and-repairs" class="tm-card-link">
           <span class="tm-card-media" aria-hidden="true">🛠️</span>
-          <span class="tm-card-tag">{{#is current_locale.locale 'da'}}Garanti{{else}}Warranty{{/is}}</span>
-          <span class="tm-card-title">{{#is current_locale.locale 'da'}}Garanti &amp; reparation{{else}}Warranty &amp; repairs{{/is}}</span>
-          <span class="tm-card-text">{{#is current_locale.locale 'da'}}Hvad 3 års Thomann garanti dækker, og hvordan du får noget repareret.{{else}}What the 3-year Thomann warranty covers and how to get something repaired.{{/is}}</span>
+          <span class="tm-card-tag">{{#is help_center.locale 'da'}}Garanti{{else}}Warranty{{/is}}</span>
+          <span class="tm-card-title">{{#is help_center.locale 'da'}}Garanti &amp; reparation{{else}}Warranty &amp; repairs{{/is}}</span>
+          <span class="tm-card-text">{{#is help_center.locale 'da'}}Hvad 3 års Thomann garanti dækker, og hvordan du får noget repareret.{{else}}What the 3-year Thomann warranty covers and how to get something repaired.{{/is}}</span>
         </a>
       </li>
       <li class="tm-card">
-        <a href="/hc/{{current_locale.locale}}/p/payment-and-invoices" class="tm-card-link">
+        <a href="/hc/{{help_center.locale}}/p/payment-and-invoices" class="tm-card-link">
           <span class="tm-card-media" aria-hidden="true">💳</span>
-          <span class="tm-card-tag">{{#is current_locale.locale 'da'}}Betaling{{else}}Payment{{/is}}</span>
-          <span class="tm-card-title">{{#is current_locale.locale 'da'}}Betalingsmetoder &amp; fakturaer{{else}}Payment methods &amp; invoices{{/is}}</span>
-          <span class="tm-card-text">{{#is current_locale.locale 'da'}}Kort, PayPal, Klarna-rater og bankoverførsel – og hvor du finder din faktura.{{else}}Card, PayPal, Klarna instalments and bank transfer – plus where to find your invoice.{{/is}}</span>
+          <span class="tm-card-tag">{{#is help_center.locale 'da'}}Betaling{{else}}Payment{{/is}}</span>
+          <span class="tm-card-title">{{#is help_center.locale 'da'}}Betalingsmetoder &amp; fakturaer{{else}}Payment methods &amp; invoices{{/is}}</span>
+          <span class="tm-card-text">{{#is help_center.locale 'da'}}Kort, PayPal, Klarna-rater og bankoverførsel – og hvor du finder din faktura.{{else}}Card, PayPal, Klarna instalments and bank transfer – plus where to find your invoice.{{/is}}</span>
         </a>
       </li>
       <li class="tm-card">
-        <a href="/hc/{{current_locale.locale}}/p/faq" class="tm-card-link">
+        <a href="/hc/{{help_center.locale}}/p/faq" class="tm-card-link">
           <span class="tm-card-media" aria-hidden="true">❓</span>
-          <span class="tm-card-tag">{{#is current_locale.locale 'da'}}FAQ{{else}}FAQ{{/is}}</span>
-          <span class="tm-card-title">{{#is current_locale.locale 'da'}}Ofte stillede spørgsmål{{else}}Frequently asked questions{{/is}}</span>
-          <span class="tm-card-text">{{#is current_locale.locale 'da'}}Hurtige svar på de spørgsmål, vi oftest får om ordrer, levering, returnering og betaling.{{else}}Quick answers to the questions we hear most about orders, delivery, returns and payment.{{/is}}</span>
+          <span class="tm-card-tag">{{#is help_center.locale 'da'}}FAQ{{else}}FAQ{{/is}}</span>
+          <span class="tm-card-title">{{#is help_center.locale 'da'}}Ofte stillede spørgsmål{{else}}Frequently asked questions{{/is}}</span>
+          <span class="tm-card-text">{{#is help_center.locale 'da'}}Hurtige svar på de spørgsmål, vi oftest får om ordrer, levering, returnering og betaling.{{else}}Quick answers to the questions we hear most about orders, delivery, returns and payment.{{/is}}</span>
         </a>
       </li>
     </ul>
@@ -133,10 +133,10 @@
   {{/if}}
 
   <section class="tm-section tm-feedback">
-    <h2 class="tm-feedback-title">{{#is current_locale.locale 'da'}}Vil du gerne dele noget med os, eller har du et spørgsmål?{{else}}Want to share something with us, or have a question?{{/is}}</h2>
+    <h2 class="tm-feedback-title">{{#is help_center.locale 'da'}}Vil du gerne dele noget med os, eller har du et spørgsmål?{{else}}Want to share something with us, or have a question?{{/is}}</h2>
     {{#link 'new_request' class='tm-btn'}}
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a2 2 0 0 0 2 2h2l5 4V5L7 9H5a2 2 0 0 0-2 2z"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg>
-      {{#is current_locale.locale 'da'}}Hjælp og feedback{{else}}Help and feedback{{/is}}
+      {{#is help_center.locale 'da'}}Hjælp og feedback{{else}}Help and feedback{{/is}}
     {{/link}}
   </section>
 

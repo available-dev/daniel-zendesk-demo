@@ -1,15 +1,15 @@
 <div class="tm-article-hero">
   <div class="tm-article-inner">
-    <p class="tm-article-eyebrow">{{#is current_locale.locale 'da'}}Betaling{{else}}Payment{{/is}}</p>
-    <h1 class="tm-article-title">{{#is current_locale.locale 'da'}}Betalingsmetoder &amp; fakturaer{{else}}Payment methods &amp; invoices{{/is}}</h1>
-    <p class="tm-article-sub">{{#is current_locale.locale 'da'}}De måder, du kan betale på, hvordan ratebetaling fungerer, og hvor du finder din faktura.{{else}}The ways you can pay, how instalments work and where to find your invoice.{{/is}}</p>
+    <p class="tm-article-eyebrow"><span class="tm-lang" lang="da">Betaling</span><span class="tm-lang" lang="en">Payment</span></p>
+    <h1 class="tm-article-title"><span class="tm-lang" lang="da">Betalingsmetoder &amp; fakturaer</span><span class="tm-lang" lang="en">Payment methods &amp; invoices</span></h1>
+    <p class="tm-article-sub"><span class="tm-lang" lang="da">De måder, du kan betale på, hvordan ratebetaling fungerer, og hvor du finder din faktura.</span><span class="tm-lang" lang="en">The ways you can pay, how instalments work and where to find your invoice.</span></p>
   </div>
 </div>
 
 <article class="tm-article">
-  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}">{{#is current_locale.locale 'da'}}Hjælpecenter{{else}}Help Center{{/is}}</a> / {{#is current_locale.locale 'da'}}Betalingsmetoder &amp; fakturaer{{else}}Payment methods &amp; invoices{{/is}}</nav>
+  <nav class="tm-breadcrumb"><a href="/hc/{{current_locale.locale}}"><span class="tm-lang" lang="da">Hjælpecenter</span><span class="tm-lang" lang="en">Help Center</span></a> / <span class="tm-lang" lang="da">Betalingsmetoder &amp; fakturaer</span><span class="tm-lang" lang="en">Payment methods &amp; invoices</span></nav>
 
-  {{#is current_locale.locale 'da'}}
+  <div class="tm-lang" lang="da">
   <p>Vælg den betalingsmetode, der passer dig, i kassen. Alle betalinger behandles over en krypteret forbindelse, og vi gemmer aldrig dine fulde kortoplysninger.</p>
 
   <h2>Betalingsmetoder</h2>
@@ -25,11 +25,12 @@
   </div>
 
   <h2>Fakturaer</h2>
-  <p>Din faktura sendes som PDF på e-mail, når ordren afsendes, og du kan altid hente den under <strong>Min konto → Ordrer</strong>. Skal fakturaen udstedes til en virksomhed eller med CVR-nummer? Tilføj oplysningerne til din kontoadresse, før du bestiller, eller <a href="/hc/{{current_locale.locale}}/requests/new">skriv til os</a>, så udsteder vi den igen.</p>
+  <p>Din faktura sendes som PDF på e-mail, når ordren afsendes, og du kan altid hente den under <strong>Min konto → Ordrer</strong>. Skal fakturaen udstedes til en virksomhed eller med CVR-nummer? Tilføj oplysningerne til din kontoadresse, før du bestiller, eller <a href="/hc/requests/new">skriv til os</a>, så udsteder vi den igen.</p>
 
   <h2>Betaling afvist?</h2>
   <p>De fleste afviste betalinger skyldes en grænse på kortet eller en tastefejl i faktureringsadressen. Tjek oplysningerne hos din bank og prøv igen – din kurv er gemt. Fortsætter problemet, så skift til en anden betalingsmetode eller kontakt os, så hjælper vi dig med at gennemføre ordren.</p>
-  {{else}}
+  </div>
+  <div class="tm-lang" lang="en">
   <p>Choose the payment method that suits you at checkout. All payments are processed over an encrypted connection and we never store your full card details.</p>
 
   <h2>Payment methods</h2>
@@ -45,18 +46,18 @@
   </div>
 
   <h2>Invoices</h2>
-  <p>Your invoice is emailed as a PDF when the order ships, and you can download it at any time from <strong>My account → Orders</strong>. Need an invoice made out to a company or with a VAT number? Add the details to your account address before ordering, or <a href="/hc/{{current_locale.locale}}/requests/new">ask us</a> and we will reissue it.</p>
+  <p>Your invoice is emailed as a PDF when the order ships, and you can download it at any time from <strong>My account → Orders</strong>. Need an invoice made out to a company or with a VAT number? Add the details to your account address before ordering, or <a href="/hc/requests/new">ask us</a> and we will reissue it.</p>
 
   <h2>Payment declined?</h2>
   <p>Most declined payments are caused by a limit on the card or a typo in the billing address. Check the details with your bank and try again – your basket is saved. If the problem continues, switch to another payment method or contact us and we will help you complete the order.</p>
-  {{/is}}
+  </div>
 
   <div class="tm-related">
-    <h2>{{#is current_locale.locale 'da'}}Læs også{{else}}Read also{{/is}}</h2>
+    <h2><span class="tm-lang" lang="da">Læs også</span><span class="tm-lang" lang="en">Read also</span></h2>
     <ul class="tm-related-links">
-      <li><a href="/hc/{{current_locale.locale}}/p/returns">{{#is current_locale.locale 'da'}}Sådan returnerer du en vare{{else}}How to return an item{{/is}}</a></li>
-      <li><a href="/hc/{{current_locale.locale}}/p/where-is-my-order">{{#is current_locale.locale 'da'}}Hvor er min ordre?{{else}}Where is my order?{{/is}}</a></li>
-      <li><a href="/hc/{{current_locale.locale}}/p/faq">{{#is current_locale.locale 'da'}}Ofte stillede spørgsmål{{else}}Frequently asked questions{{/is}}</a></li>
+      <li><a href="/hc/p/returns"><span class="tm-lang" lang="da">Sådan returnerer du en vare</span><span class="tm-lang" lang="en">How to return an item</span></a></li>
+      <li><a href="/hc/p/where-is-my-order"><span class="tm-lang" lang="da">Hvor er min ordre?</span><span class="tm-lang" lang="en">Where is my order?</span></a></li>
+      <li><a href="/hc/p/faq"><span class="tm-lang" lang="da">Ofte stillede spørgsmål</span><span class="tm-lang" lang="en">Frequently asked questions</span></a></li>
     </ul>
   </div>
 </article>
